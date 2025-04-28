@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Hey Ian!</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="content/images/favicon.ico">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,400italic,500,700,700italic,900'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,400italic,500,700,700italic,900'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/global.css'>
+    <link rel='stylesheet' href='content/css/structure.css'>
+    <link rel='stylesheet' href='content/css/itservice4.css'>
+    <link rel='stylesheet' href='content/css/custom.css'>
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="plugins/rs-plugin-6.custom/css/rs6.css">
+</head>
+
+<body class="home page template-slider style-simple button-custom layout-full-width no-content-padding header-transparent header-fw minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-title-left">
+    <div id="Wrapper">
+        <div id="Header_wrapper">
+            <header id="Header">
+                <div id="Top_bar">
+                    <div class="container">
+                        <div class="column one">
+                            <div class="top_bar_left clearfix">
+                                <div class="logo">
+                                    <a id="logo" href="index.html" title="Hey Ian! 4 - Hey Ian!" data-height="60" data-padding="30">
+                                        <img class="logo-main scale-with-grid" src="content/images/itservice-logo.png" alt="HeyIan.tech">
+                                    </a>
+                                </div>
+                                <div class="menu_wrapper">
+                                    <nav id="menu">
+                                        <ul id="menu-main-menu" class="menu menu-main">
+                                            <li class="current-menu-item page_item current_page_item">
+                                                <a href="index.html"><span>Home</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="content/about.html"><span>About us</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="content/services.html"><span>Services</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="content/qa.html"><span>Q&#038;A</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="content/contact.html"><span>Contact</span></a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href=""><span><span style="padding: 0; color: #ead9c1;"></span></span></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a>
+                                </div>
+                            </div>
+                            <div class="top_bar_right">
+                                <div class="top_bar_right_wrapper">
+                                    <a href="content/contact.html" class="action_button">Help!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mfn-main-slider mfn-rev-slider">
+                    <p class="rs-p-wp-fix"></p>
+                    <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
+                        <rs-module id="rev_slider_1_1" data-version="6.2.22">
+                            <rs-slides>
+                                <rs-slide data-key="rs-1" data-title="Slide" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+                                    <img src="content/images/itservice-slider-bg.png" data-parallax="2" class="rev-slidebg">
+                                    <rs-layer id="slider-1-slide-1-layer-0" data-type="text" data-rsp_ch="on" data-xy="xo:50px,50px,60px,60px;y:m;yo:0,0,-80px,-80px;" data-text="w:normal;s:75,75,80,80" data-frame_999="o:0;st:w;sR:7950;" style="z-index:9;font-family:DM Sans;">
+                                        Do you have a problem with your device?
+                                    </rs-layer>
+                                    <rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-rsp_ch="on" data-xy="xo:50px,50px,60px,60px;y:m;yo:-130px,-130px,-261px,-261px;" data-text="w:normal;s:75,75,80,80" data-frame_1="st:100;sp:900;sR:100;" data-frame_999="o:0;st:w;sR:8000;" style="z-index:8;font-family:DM Sans;">
+                                        We are Hey Ian!
+                                    </rs-layer>
+                                    <rs-layer id="slider-1-slide-1-layer-2" class="rev-btn" data-type="button" data-color="#321949" data-rsp_ch="on" data-xy="xo:53px,53px,60px,60px;y:m;yo:150px,150px,150px,150px;" data-padding="r:40,40,45,45;l:40,40,45,45;" data-border="bor:25px,25px,25px,25px;" data-frame_1="st:200;sp:900;sR:200;" data-frame_999="o:0;st:w;sR:7900;" data-frame_999="o:0;st:w;sR:7900;" style="z-index:10;background-color:#fff;font-family:DM Sans;">
+                                        Read more
+                                    </rs-layer>
+                                </rs-slide>
+                            </rs-slides>
+                        </rs-module>
+                    </rs-module-wrap>
+                </div>
+            </header>
+        </div>
+        <div id="Content">
+        </div>
+        <footer id="Footer" class="clearfix">
+            <div class="copyright">
+                &copy; 2025 Hey Ian . Tech - Hey Ian LLC - HTML by <a target="_blank" rel="nofollow" href="">BeantownThemes</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

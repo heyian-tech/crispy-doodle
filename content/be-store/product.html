@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>Be</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- FONTS -->
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter:100,200,300,400,400italic,500,600,700,700italic,900'>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400italic,500,600,700,700italic,900'>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,400italic,500,600,700,700italic,900'>
+	<!-- Bootstrap core CSS -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<!--CSS -->
+	<link rel='stylesheet' href='css/structure.css'>
+	<link rel='stylesheet' href='css/be-store.css'> </head>
+
+<body class="product-template-default single single-product theme-betheme woocommerce woocommerce-page woocommerce-no-js ofcs-mobile content-brightness-light input-brightness-light style-default button-default layout-full-width if-modern-overlay no-shadows header-shop sticky-header sticky-tb-color ab-show subheader-both-center menu-link-color menuo-arrows menuo-no-borders mm-vertical boxed2fw mobile-tb-center mobile-side-slide mobile-mini-mr-lc mobile-sticky mobile-header-mini mobile-icon-user-ss mobile-icon-wishlist-ss mobile-icon-cart-tb mobile-icon-search-ss mobile-icon-wpml-ss mobile-icon-action-ss be-page-8 be-reg-2514 stock-disabled wishlist-active wishlist-button mobile-row-2-products mfn-variable-swatches mfn-hidden-icon-count footer-menu-sticky shop-sidecart-active mfn-ajax-add-to-cart">
+	<div id="Wrapper">
+		<div id="Header_wrapper">
+			<header id="Header">
+				<div id="Action_bar">
+					<div class="container">
+						<div class="column one">
+							<ul class="contact_details">
+								<li class="slogan"> Free Shipping over $100 &amp; 60 days returns </li>
+							</ul>
+							<ul class="social">
+								<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
+								<li class="twitter"> <a href="#" title="Twitter"><i class="icon-twitter"></i></a> </li>
+								<li class="vimeo"> <a href="#" title="Vimeo"><i class="icon-vimeo"></i></a> </li>
+								<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="Top_bar">
+					<div class="container">
+						<div class="column one">
+							<div class="top_bar_row top_bar_row-first clearfix">
+								<div class="logo">
+									<a id="logo" href="../../index-be-store.html" title="Betheme Store" data-height="60" data-padding="15"><img class="logo-main scale-with-grid " src="images/bethemestore.png" data-retina="images/retina-bethemestore.png" data-height="32" alt="bethemestore" /><img class="logo-sticky scale-with-grid " src="images/bethemestore.png" data-retina="images/retina-bethemestore.png" data-height="32" alt="bethemestore" /><img class="logo-mobile scale-with-grid " src="images/bethemestore.png" data-retina="images/retina-bethemestore.png" data-height="32" alt="bethemestore" /><img class="logo-mobile-sticky scale-with-grid " src="images/bethemestore.png" data-retina="images/retina-bethemestore.png" data-height="32" alt="bethemestore" /></a><a class="responsive-menu-toggle " href="#" aria-label="Mobile menu"><i class="icon-menu-fine" aria-hidden="true"></i></a> </div>
+								<div class="top_bar_right hide-total-tablet hide-total-mobile">
+									<div class="top_bar_right_wrapper">
+										<a id="myaccount_button" class="top-bar-right-icon top-bar-right-icon-user toggle-login-modal is-boxed logged-out" href="#">
+											<svg width="26" viewBox="0 0 26 26">
+												<defs>
+													<style>
+													.path {
+														fill: none;
+														stroke: #333333;
+														stroke-width: 1.5px;
+													}
+													</style>
+												</defs>
+												<circle class="path" cx="13" cy="9.7" r="4.1" />
+												<path class="path" d="M19.51,18.1v2.31h-13V18.1c0-2.37,2.92-4.3,6.51-4.3S19.51,15.73,19.51,18.1Z" /> </svg>
+										</a>
+										<a id="wishlist_button" class="top-bar-right-icon top-bar-right-icon-wishlist" href="#">
+											<svg width="26" viewBox="0 0 26 26">
+												<defs>
+													<style>
+													.path {
+														fill: none;
+														stroke: #333;
+														stroke-width: 1.5px;
+													}
+													</style>
+												</defs>
+												<path class="path" d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z" /> </svg>
+										</a>
+										<a id="header_cart" class="top-bar-right-icon header-cart top-bar-right-icon-cart toggle-mfn-cart" href="#">
+											<svg width="26" viewBox="0 0 26 26">
+												<defs>
+													<style>
+													.path {
+														fill: none;
+														stroke: #333;
+														stroke-miterlimit: 10;
+														stroke-width: 1.5px;
+													}
+													</style>
+												</defs>
+												<polygon class="path" points="20.4 20.4 5.6 20.4 6.83 10.53 19.17 10.53 20.4 20.4" />
+												<path class="path" d="M9.3,10.53V9.3a3.7,3.7,0,1,1,7.4,0v1.23" /> </svg>
+										</a>
+										<div class="wpml-languages enabled">
+											<a class="active" ontouchstart="this.classList.toggle('hover');"><img src="images/en.png" /><i class="icon-down-open-mini"></i></a>
+											<ul class="wpml-lang-dropdown">
+												<li>
+													<a href="#"><img src="images/de.png" /></a>
+												</li>
+												<li>
+													<a href="#"><img src="images/it.png" /></a>
+												</li>
+												<li>
+													<a href="#"><img src="images/es.png" /></a>
+												</li>
+												<li>
+													<a href="#"><img src="images/fr.png" /></a>
+												</li>
+												<li>
+													<a href="#"><img src="images/nl.png" /></a>
+												</li>
+												<li>
+													<a href="#"><img src="images/pt-br.png" /></a>
+												</li>
+												<li>
+													<a href="#"><img src="images/pl.png" /></a>
+												</li>
+											</ul>
+										</div><a class="responsive-menu-toggle " href="#" aria-label="Mobile menu"><i class="icon-menu-fine" aria-hidden="true"></i></a> </div>
+								</div>
+							</div>
+							<div class="top_bar_row top_bar_row_second clearfix">
+								<div class="menu_wrapper">
+									<nav id="menu">
+										<ul id="menu-main-menu" class="menu menu-main menu_left">
+											<li> <a href="../../index-be-store.html"><span>Home</span></a> </li>
+											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"> <a><span>Features</span></a>
+												<ul class="sub-menu mfn-megamenu mfn-megamenu-4">
+													<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mfn-megamenu-cols-4"> <a class="mfn-megamenu-title"><span>Shop Layouts</span></a>
+														<ul class="sub-menu mfn-megamenu mfn-megamenu-4">
+															<li> <a href="shop.html"><span>Grid 3 Columns</span></a> </li>
+															<li> <a href="shop.html"><span>Grid 4 Columns</span></a> </li>
+															<li> <a href="shop.html"><span>Masonry 3 Columns</span></a> </li>
+															<li> <a href="shop.html"><span>List</span></a> </li>
+															<li> <a href="shop.html"><span>Left Sidebar with variations</span></a> </li>
+															<li> <a href="shop.html"><span>Right Sidebar with variations</span></a> </li>
+															<li> <a href="shop.html"><span>Left Sidebar Grid 3 columns</span></a> </li>
+															<li> <a href="shop.html"><span>Right Sidebar Grid 3 columns</span></a> </li>
+														</ul>
+													</li>
+													<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mfn-megamenu-cols-4"> <a class="mfn-megamenu-title"><span>Single Product Styles</span></a>
+														<ul class="sub-menu mfn-megamenu mfn-megamenu-4">
+															<li> <a href="product.html"><span>Default</span></a> </li>
+															<li> <a href="product.html"><span>Accordion below image</span></a> </li>
+															<li> <a href="product.html"><span>Tabs below image</span></a> </li>
+															<li> <a href="product.html"><span>Accordion next to image</span></a> </li>
+															<li> <a href="product.html"><span>Tabs next to image</span></a> </li>
+															<li> <a href="product.html"><span>Out of stock</span></a> </li>
+															<li> <a href="product.html"><span>On sale</span></a> </li>
+															<li> <a href="product.html"><span>Custom template</span></a> </li>
+														</ul>
+													</li>
+													<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mfn-megamenu-cols-4"> <a class="mfn-megamenu-title"><span>Product gallery styles</span></a>
+														<ul class="sub-menu mfn-megamenu mfn-megamenu-4">
+															<li> <a href="product.html"><span>Thumbnails: Bottom Left</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Bottom Center</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Bottom Right</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Left Top</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Left Center</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Left Bottom</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Right Top</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Right Center</span></a> </li>
+															<li> <a href="product.html"><span>Thumbnails: Right Bottom</span></a> </li>
+															<li> <a href="product.html"><span>Gallery Grid</span></a> </li>
+														</ul>
+													</li>
+													<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mfn-megamenu-cols-4"> <a class="mfn-megamenu-title" href="#"><span> </span></a>
+														<ul class="sub-menu mfn-megamenu mfn-megamenu-4">
+															<li> <a href="product.html"><span>Overlay: Bottom Left</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Bottom Center</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Bottom Right</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Left Top</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Left Center</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Left Bottom</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Right Top</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Right Center</span></a> </li>
+															<li> <a href="product.html"><span>Overlay: Right Bottom</span></a> </li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="menu-item menu-item-_type menu-item- current_page_parent current-menu-item"> <a href="shop.html"><span>Shop</span></a> </li>
+											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"> <a><span>Pages</span></a>
+												<ul class="sub-menu">
+													<li> <a href="#"><span>Promotions</span></a> </li>
+													<li> <a href="#"><span>Cart</span></a> </li>
+													<li> <a href="product.html"><span>Side Cart</span></a> </li>
+													<li> <a href="#"><span>Wishlist</span></a> </li>
+													<li> <a href="#"><span>Checkout</span></a> </li>
+													<li> <a href="#"><span>My account</span></a> </li>
+												</ul>
+											</li>
+										</ul>
+										<ul id="menu-right-menu" class="menu menu-main menu_right">
+											<li> <a href="about.html"><span>About</span></a> </li>
+											<li> <a href="contact.html"><span>Contact</span></a> </li>
+											<li> <a href="#"><span>Terms of use</span></a> </li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div id="Subheader">
+				<div class="container">
+					<div class="column one">
+						<h2 class="title">Shop</h2>
+						<ul class="breadcrumbs woocommerce-breadcrumb">
+							<li> <a href="../../index-be-store.html">Home</a><span><i class="icon-right-open"></i></span> </li>
+							<li> <a href="#">Accessories</a><span><i class="icon-right-open"></i></span> </li>
+							<li> <a href="#">Headphones</a><span><i class="icon-right-open"></i></span> </li>
+							<li> BeHeadphones<span><i class="icon-right-open"></i></span> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Content">
+			<div class="section section_product_before_tabs">
+				<div class="section_wrapper clearfix">
+					<div class="container"> <a class="fixed-nav fixed-nav-prev format- style-images" href="product.html"><span class="arrow"><i class="icon-left-open-big"></i></span>
+										<div class="photo"><img width="80" height="80" src="images/bethemestore-product-pic10-80x80.webp" class="attachment-blog-navi size-blog-navi wp-post-image" loading="lazy"/>
+										</div>
+										<div class="desc">
+											<h6>BeTV</h6><span class="date"><i class="icon-clock"></i>September 15, 2021</span>
+										</div></a> <a class="fixed-nav fixed-nav-next format- style-images" href="product.html"><span class="arrow"><i class="icon-right-open-big"></i></span>
+										<div class="photo"><img width="80" height="80" src="images/bethemestore-product-pic12-80x80.webp" class="attachment-blog-navi size-blog-navi wp-post-image" loading="lazy"/>
+										</div>
+										<div class="desc">
+											<h6>BeHeadphones2</h6><span class="date"><i class="icon-clock"></i>September 15, 2021</span>
+										</div></a>
+						<div class="row">
+							<div class="col-12">
+								<hr class="no_line" style="margin: 0 auto 80px auto" /> </div>
+							<div class="col-md-7">
+								<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images mfn-product-gallery mfn-thumbnails-bottom mfn-bottom-left mfn-thumbnails-outside mfn-mim-0" data-columns="4" style="transition: opacity .25s ease-in-out;">
+									<figure class="woocommerce-product-gallery__wrapper" data-columns="4"> <img width="800" height="800" src="images/bethemestore-product-pic11-800x800.webp" class="wp-post-image" loading="lazy" title="bethemestore-product-pic11" data-caption="" data-src="images/bethemestore-product-pic11.webp" data-large_image="images/bethemestore-product-pic11.webp" data-large_image_width="1200" data-large_image_height="1200" /> </figure>
+								</div>
+							</div>
+							<div class="col-md-5 text-center">
+								<h1 class="product_title entry-title"> BeHeadphones</h1>
+								<div class="woocommerce-product-rating">
+									<div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"> <span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">2</span> customer ratings</span>
+									</div> <a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span class="count">2</span> customer reviews)</a> </div>
+								<div class="woocommerce-product-details__short-description">
+									<p> Curabitur interdum vitae, fringilla orci. Proin luctus. Sed neque. Vestibulum nibh eu wisi. Phasellus ipsum eget lacus vehicula ullamcorper, augue eu cursus a, mauris. Ut bibendum wisi eget gravida feugiat lectus sit amet mauris non mi libero, pharetra elementum. Mauris arcu. In mauris dui dolor, dictum id, elit. </p>
+								</div>
+								<p class="price"> <del aria-hidden="true"><span class="woocommerce-Price-amount amount">
+															<bdi>
+																<span class="woocommerce-Price-currencySymbol">&#36;</span>99.90
+															</bdi></span></del><ins><span class="woocommerce-Price-amount amount">
+															<bdi>
+																<span class="woocommerce-Price-currencySymbol">&#36;</span>85.90
+															</bdi></span></ins> </p>
+								<form class="cart" action="index-be-store.html/product/beheadphones/" method="post" enctype='multipart/form-data'>
+									<button type="submit" name="add-to-cart" value="611" class="single_add_to_cart_button button alt"> Add to cart </button>
+								</form>
+								<hr class="no_line" style="margin: 0 auto 20px auto" />
+								<div class="product_meta"> <span class="posted_in">Categories: <a href="#" rel="tag">Accessories</a>, <a href="#" rel="tag">Gaming</a>, <a href="#" rel="tag">Headphones</a>, <a href="#" rel="tag">Headphones</a>, <a href="#" rel="tag">TV/Audio</a></span> <span class="tagged_as">Tags: <a href="product-tag/accessori#" rel="tag">Accessories</a> <a href="#" rel="tag">Headphones</a></span> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row" data-col="one" style="padding:20px 0">
+					<div class="col-12">
+						<div class="column_attr clearfix mobile_align_center">
+							<h3>Best performance</h3>
+							<p> <b>Veniam quis nostrud exercitation</b> ullamco laboris nisi ut aliquip ex ea commodo consequor in reprehenderit in voluptate velit esse cillum dolore eu fuariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde <a href="#">omnis iste natus error</a> sit voluptatem accusantium doloremque laudantium, totam quam eius modi tempora ot viaran <a href="#">et dolluptatem</a>. </p>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="image_frame image_item no_link scale-with-grid no_border">
+							<div class="image_wrapper"><img class="scale-with-grid" src="images/bethemestore-productdetails-pic2.webp" alt="bethemestore-productdetails-pic2" width="1200" height="1000" /> </div>
+						</div>
+					</div>
+				</div>
+				<div class="row" data-col="one" style="padding:20px 0">
+					<div class="col-12">
+						<div class="column_attr clearfix mobile_align_center">
+							<h3>Screen resolution</h3>
+							<p> <b>Turpis aliquam tristique</b> ut tortor venenatis curabitur mi diam in molestie etiam <a href="#">pellentesque malesuada litora</a> senectus malesuada donec rutrum suscipit hendrerit luctus dapibus integer aliquet class sodales ornare rutrum lacus magna quam id magna consequat nullam conubia et volutpat sodales torquent accumsan luctus fermentum himenaeos. Sollicitudin ipsum hac praesent eleifend suscipit congue conubia <a href="#">faucibus porta</a>. </p>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="image_frame image_item no_link scale-with-grid no_border">
+							<div class="image_wrapper"><img class="scale-with-grid" src="images/bethemestore-productdetails-pic3.webp" alt="bethemestore-productdetails-pic3" width="1200" height="800" /> </div>
+						</div>
+					</div>
+					<div class="col-12">
+						<hr class="no_line" style="margin: 0 auto 40px auto" /> </div>
+					<div class="col-12">
+						<div class="column_attr clearfix mobile_align_center">
+							<h3>Top quality speed</h3>
+							<p> <b>Turpis aliquam tristique</b> ut tortor venenatis curabitur mi diam in molestie etiam <a href="#">pellentesque malesuada litora</a> senectus malesuada donec rutrum suscipit hendrerit luctus dapibus integer aliquet class sodales ornare rutrum lacus magna quam id magna consequat nullam conubia et volutpat sodales torquent accumsan luctus fermentum himenaeos. Sollicitudin ipsum hac praesent eleifend suscipit congue conubia <a href="#">faucibus porta</a>. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4" data-col="one-third" style="padding:20px 0">
+						<div class="image_frame image_item no_link scale-with-grid no_border">
+							<div class="image_wrapper"><img class="scale-with-grid" src="images/bethemestore-productdetails-pic4.webp" alt="bethemestore-productdetails-pic4" width="780" height="780" /> </div>
+						</div>
+					</div>
+					<div class="col-md-8" data-col="two-third" style="padding:20px 0 20px 2%">
+						<div class="column_attr clearfix mobile_align_center">
+							<h3>Battery</h3>
+							<p> Laboris nisi ut aliquip ex ea commodo consequor in reprehenderit in voluptate velit esse cillum dolore eu fuariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8" data-col="two-third" style="padding:20px 2% 20px 0">
+						<div class="column_attr clearfix mobile_align_center">
+							<h3>Camera</h3>
+							<p> Vulputate at nullam elementum iaculis metus turpis auctor molestie justo phasellus vulputate nam massa congue primis est in suscipit non convallis suscipit fusce eleifend porta egestas donec libero ultricies dictumst odio ipsum curabitur donec mollis habitasse aliquam mollis cubilia pretium fusce orci id fusce diam lobortis bibendum ut molestie pharetra. </p>
+						</div>
+					</div>
+					<div class="col-md-4" data-col="one-third" style="padding:20px 0">
+						<div class="image_frame image_item no_link scale-with-grid no_border">
+							<div class="image_wrapper"><img class="scale-with-grid" src="images/bethemestore-productdetails-pic5.webp" alt="bethemestore-productdetails-pic5" width="780" height="780" /> </div>
+						</div>
+					</div>
+				</div>
+				<div class="row" data-col="one" style="padding:20px 0">
+					<div class="col-12">
+						<div class="column_attr clearfix mobile_align_center">
+							<h3>Product additions</h3>
+							<p> Aboris nisi ut aliquip ex ea commodo consequor in reprehenderit in voluptate velit esse cillum dolore eu fuariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. </p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="column_attr clearfix" style="background-image:url('images/bethemestore-contact-icon1.webp');background-repeat:no-repeat;background-position:left top;padding:10px 0 0 60px;">
+							<h6>We are Woocommerce ready</h6>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorpe </p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="column_attr clearfix" style="background-image:url('images/bethemestore-contact-icon1.webp');background-repeat:no-repeat;background-position:left top;padding:10px 0 0 60px;">
+							<h6>Blazingly fast shop from scratch </h6>
+							<p> Cras enim porttitor vel, eros. Integer aliquam. In vitae sagittis porttitor. Aenean vulputate </p>
+						</div>
+					</div>
+					<div class="col-12">
+						<hr class="no_line" style="margin: 0 auto 0px auto" /> </div>
+					<div class="col-md-6">
+						<div class="column_attr clearfix" style="background-image:url('images/bethemestore-contact-icon1.webp');background-repeat:no-repeat;background-position:left top;padding:10px 0 0 60px;">
+							<h6>Template for your shop page</h6>
+							<p> Nulla congue. Donec tortor. Morbi tincidunt. Fusce ut nibh. Suspendisse adipiscing </p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="column_attr clearfix" style="background-image:url('images/bethemestore-contact-icon1.webp');background-repeat:no-repeat;background-position:left top;padding:10px 0 0 60px;">
+							<h6>Fresh lookup for your website</h6>
+							<p> Quisque arcu dolor, rhoncus eget, neque. Vestibulum luctus, quam pede fermentum. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row" data-col="one" style="padding:20px 0">
+					<div class="col-12">
+						<h3 class="text-center">Specification</h3>
+						<table>
+							<tbody>
+								<tr>
+									<td>Brand</td>
+									<td>Tempus litora</td>
+								</tr>
+								<tr>
+									<td>Number of ports</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>Additions</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Hard Drive size</td>
+									<td>256 MB, 512 MB, 1 TB, 2 TB</td>
+								</tr>
+								<tr>
+									<td>Specific Uses For Product</td>
+									<td><b>Neque aenean</b> aliquet <a href="#">amet mattis</a></td>
+								</tr>
+								<tr>
+									<td>Processor Count</td>
+									<td>12</td>
+								</tr>
+								<tr>
+									<td>Operating System</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Additional drive</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td>Congue</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Semper</td>
+									<td>full</td>
+								</tr>
+								<tr>
+									<td>Series</td>
+									<td>Euismod</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="Footer" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<hr class="no_line" style="margin: 0 auto 100px auto" /> </div>
+					<div class="col-md-3">
+						<h4>Useful links</h4>
+						<ul>
+							<li> <a href="contact.html">Contact us</a> </li>
+							<li> <a href="about.html">Help &amp; About us</a> </li>
+							<li> <a href="#">Shipping &amp; Returns</a> </li>
+							<li> <a href="#">Refund Policy</a> </li>
+							<li> <a href="#">Press Room</a> </li>
+							<li> <a href="#">Privacy Policy</a> </li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Customer service</h4>
+						<ul>
+							<li> <a href="#">Dashboard</a> </li>
+							<li> <a href="#">Orders</a> </li>
+							<li> <a href="#" data-type="URL" data-id="#">Downloads</a> </li>
+							<li> <a href="#">Addresses</a> </li>
+							<li> <a href="#">Account details</a> </li>
+							<li> <a href="#">Lost password</a> </li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Working time</h4>
+						<p> Level 13, 2 Elizabeth St,
+							<br> Melbourne, Victoria 3000,
+							<br> Australia </p>
+						<p> Monday - Friday
+							<br> <strong>09:00 AM - 06:00 PM</strong> </p>
+						<p></p>
+						<p> Saturday
+							<br> <strong>07:00 AM - 08:00 PM</strong> </p>
+					</div>
+					<div class="col-md-3">
+						<h4>Payment methods</h4>
+						<p> Curabitur interdum. Proin consectetuer ut, <a href="#">more information</a>. </p>
+						<hr class="wp-block-separator" />
+						<figure class="wp-block-image size-full is-style-default"><img src="images/bethemestore-icon1.webp" class="wp-image-363" /> </figure>
+						<figure class="wp-block-image size-full"><img src="images/bethemestore-icon2.webp" class="wp-image-364" /> </figure>
+					</div>
+					<div class="col-12">
+						<hr class="no_line" style="margin: 0 auto 30px auto" /> </div>
+				</div>
+			</div>
+			<div class="footer_copy">
+				<div class="container">
+					<div class="column one"> <a id="back_to_top" class="footer_button" href="#"><i class="icon-up-open-big"></i></a>
+						<div class="copyright"> &copy; 2021 - BeTheme. Muffin group - HTML by <a target="_blank" rel="nofollow" href="https://1.envato.market/9ZxXY">BeantownThemes</a> </div>
+						<ul class="social">
+							<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
+							<li class="twitter"> <a href="#" title="Twitter"><i class="icon-twitter"></i></a> </li>
+							<li class="vimeo"> <a href="#" title="Vimeo"><i class="icon-vimeo"></i></a> </li>
+							<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="body_overlay"></div>
+	<div id="Side_slide" class="right dark" data-width="250">
+		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
+		<div class="extras">
+			<div class="extras-wrapper">
+				<a id="myaccount_button" class="top-bar-right-icon top-bar-right-icon-user toggle-login-modal logged-out" href="#">
+					<svg width="26" viewBox="0 0 26 26">
+						<defs>
+							<style>
+							.path {
+								fill: none;
+								stroke: #333333;
+								stroke-width: 1.5px;
+							}
+							</style>
+						</defs>
+						<circle class="path" cx="13" cy="9.7" r="4.1" />
+						<path class="path" d="M19.51,18.1v2.31h-13V18.1c0-2.37,2.92-4.3,6.51-4.3S19.51,15.73,19.51,18.1Z" /> </svg>
+				</a>
+				<a id="wishlist_button" class="top-bar-right-icon top-bar-right-icon-wishlist" href="#">
+					<svg width="26" viewBox="0 0 26 26">
+						<defs>
+							<style>
+							.path {
+								fill: none;
+								stroke: #333;
+								stroke-width: 1.5px;
+							}
+							</style>
+						</defs>
+						<path class="path" d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z" /> </svg><span class="header-wishlist-count">0</span></a>
+				<a id="header_cart" class="top-bar-right-icon top-bar-right-icon-cart toggle-mfn-cart" href="#">
+					<svg width="26" viewBox="0 0 26 26">
+						<defs>
+							<style>
+							.path {
+								fill: none;
+								stroke: #333;
+								stroke-miterlimit: 10;
+								stroke-width: 1.5px;
+							}
+							</style>
+						</defs>
+						<polygon class="path" points="20.4 20.4 5.6 20.4 6.83 10.53 19.17 10.53 20.4 20.4" />
+						<path class="path" d="M9.3,10.53V9.3a3.7,3.7,0,1,1,7.4,0v1.23" /> </svg><span class="header-cart-count">0</span>
+					<p class="header-cart-total"> &#36;0.00 </p>
+				</a>
+				<a class="top-bar-right-icon top-bar-right-icon-search icon search" href="#">
+					<svg width="26" viewBox="0 0 26 26">
+						<defs>
+							<style>
+							.path {
+								fill: none;
+								stroke: #000;
+								stroke-miterlimit: 10;
+								stroke-width: 1.5px;
+							}
+							</style>
+						</defs>
+						<circle class="path" cx="11.35" cy="11.35" r="6" />
+						<line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65" /> </svg>
+				</a>
+				<a class="lang-active" href="#"><img src="images/en.png" /><i class="icon-down-open-mini"></i></a>
+			</div>
+		</div>
+		<div class="lang-wrapper">
+			<ul class="wpml-lang">
+				<li>
+					<a href="../../index-be-store.html" class="active"><img src="images/en.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/de.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/it.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/es.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/fr.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/nl.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/pt-br.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/pl.png" /></a>
+				</li>
+			</ul>
+		</div>
+		<div class="menu_wrapper"></div>
+		<ul class="social">
+			<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
+			<li class="twitter"> <a href="#" title="Twitter"><i class="icon-twitter"></i></a> </li>
+			<li class="vimeo"> <a href="#" title="Vimeo"><i class="icon-vimeo"></i></a> </li>
+			<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
+		</ul>
+	</div>
+	<!-- JS -->
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<script src="../../js/jquery-migrate-3.4.0.min.js"></script>
+	<script src="../../js/mfn.menu.js"></script>
+	<script src="../../js/jquery.plugins.js"></script>
+	<script src="../../js/jquery.jplayer.min.js"></script>
+	<script src="../../js/animations/animations.js"></script>
+	<script src="../../js/translate3d.js"></script>
+	<script src="../../js/scripts.js"></script>
+</body>
+
+</html>

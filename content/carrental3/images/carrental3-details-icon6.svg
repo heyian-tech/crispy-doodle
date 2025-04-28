@@ -1,0 +1,9 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_213_4055" fill="white">
+<rect y="5" width="30" height="20" rx="2"/>
+</mask>
+<rect y="5" width="30" height="20" rx="2" stroke="#2D2F35" stroke-width="4.4" mask="url(#path-1-inside-1_213_4055)"/>
+<line x1="1" y1="9.9" x2="29" y2="9.9" stroke="#2D2F35" stroke-width="2.2"/>
+<line x1="1" y1="13.9" x2="29" y2="13.9" stroke="#2D2F35" stroke-width="2.2"/>
+<line x1="21.1" y1="19.9" x2="23.9" y2="19.9" stroke="#2D2F35" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

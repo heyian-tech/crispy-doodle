@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<svg id="carwash3-section-bg3" width="1920" height="523" viewBox="0 0 1920 523" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; max-height: 100%;">
+<path d="M1681.19 472.426C1722.88 460.5 1752 421.85 1752 378.437V230.116C1752 193.421 1724.58 162.315 1688.21 157.766L1596.46 146.283C1557.1 141.357 1519.17 129.858 1483.7 112.101L1365.97 53.1648C1314.79 27.5435 1257.49 14 1200.27 14H979.256C913.398 14 849.221 32.7117 793.657 68.115L673.414 144.729C629.094 172.967 577.788 187.723 525.394 191.782C445.397 197.98 326.306 213.978 237.529 255.257C195.011 275.025 167.537 318.55 167.534 366.136V448.593C167.534 472.581 174.531 493.31 187.764 508.545" stroke="url(#paint0_linear_237_1872)" stroke-width="12" stroke-dasharray="0,0,1753.9208984375,438.4802246093749"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="10s" values="0,0,1753.9208984375,438.4802246093749; 
+          0,438.4802246093749,1753.9208984375,0; 
+          1753.9208984375,438.4802246093749,0,0" keyTimes="0; 0.19999999999999996; 1"></animate></path>
+<defs>
+<linearGradient id="paint0_linear_237_1872" x1="959.767" y1="14" x2="959.767" y2="508.545" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E4EC0"></stop>
+<stop offset="0.869792" stop-color="#1C3AA4"></stop>
+</linearGradient>
+</defs>
+<setting>{"type":"loader","speed":5,"random":1,"shift":1,"size":1,"rupture":50}</setting></svg>

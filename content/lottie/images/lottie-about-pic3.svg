@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 160 160">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_241" data-name="Rectangle 241" width="160" height="160" transform="translate(1030 1576.5)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff6a50"/>
+      <stop offset="1" stop-color="#e51a97"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_8" data-name="Mask Group 8" transform="translate(-1030 -1576.5)" clip-path="url(#clip-path)">
+    <g id="fonts" transform="translate(1049.693 1600.659)">
+      <path id="Path_679" data-name="Path 679" d="M-32.409,632.081H-144.5a4,4,0,0,0-4,4v94.911a4,4,0,0,0,4,4h27.728v13.96a4.2,4.2,0,0,0,4.2,4.2,4.2,4.2,0,0,0,2.973-1.23l17.4-16.932h59.8a4,4,0,0,0,4-4h0V636.078a4,4,0,0,0-4-4Z" transform="translate(148.505 -632.081)" fill="url(#linear-gradient)"/>
+      <g id="Aa" transform="translate(28.858 20.914)" style="mix-blend-mode: normal;isolation: isolate">
+        <text id="Aa-2" data-name="Aa" transform="translate(0 45)" fill="#fefeff" font-size="46" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700" letter-spacing="0.02em" style="mix-blend-mode: normal;isolation: isolate"><tspan x="0" y="0">Aa</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

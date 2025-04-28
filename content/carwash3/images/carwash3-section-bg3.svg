@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<svg id="Frame1000002336" width="1920" height="800" viewBox="0 0 1920 800" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; max-height: 100%;">
+<path d="M662.75 0C662.75 164.443 796.057 297.75 960.5 297.75C1124.94 297.75 1258.25 164.443 1258.25 0M513.875 0C513.875 246.664 713.836 446.625 960.5 446.625C1207.16 446.625 1407.12 246.664 1407.12 0M365 0C365 328.886 631.614 595.5 960.5 595.5C1289.39 595.5 1556 328.886 1556 0" stroke="url(#paint0_linear_235_1885)" stroke-width="124" stroke-dasharray="0,0,0,4209.93115234375"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="1" dur="2.5s" values="0,0,0,4209.93115234375; 
+          0,2104.965576171875,2104.965576171875,0; 
+          4209.93115234375,0,0,0" keyTimes="0; 0.5; 1" fill="freeze"></animate></path>
+<defs>
+<linearGradient id="paint0_linear_235_1885" x1="568.816" y1="-171.871" x2="1213.45" y2="590.441" gradientUnits="userSpaceOnUse">
+<stop offset="0.116762" stop-color="#4462CC"></stop>
+<stop offset="0.776042" stop-color="#2D4CB8" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<setting>{"type":"direct","speed":20,"random":1,"shift":1,"size":1,"rupture":50}</setting></svg>

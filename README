@@ -1,0 +1,23 @@
+# Hey Ian LLC Website
+
+Welcome to the repository for **Your IT Business Website**. This project is a responsive, one-page website template tailored for IT businesses. It includes a header, hero section, about section, services overview, and a contact form.
+
+## Features
+
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Clean Layout:** Modern and professional design with easy-to-navigate sections.
+- **Customizable:** Simply modify the HTML and CSS to reflect your brand’s identity.
+- **GitHub Pages Ready:** Perfect for hosting on GitHub Pages with minimal setup.
+
+## Getting Started
+
+### Prerequisites
+- A web browser to preview the site.
+- A text editor (e.g., Visual Studio Code) for making modifications.
+- (Optional) Git to clone and manage the repository locally.
+
+### Installation
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/heyian-tech/your-repository.git

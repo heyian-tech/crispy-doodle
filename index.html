@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hey Ian</title>
+  <style>
+    /* Reset some basic elements */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #008DB9;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 20px 0;
+    }
+    
+    header .logo h2 {
+      margin: 0;
+    }
+    
+    nav {
+      margin-top: 10px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: #e0f0ff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    
+    .btn {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #005bb5;
+    }
+    
+    /* Sections */
+    section {
+      padding: 60px 20px;
+    }
+    
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #0073e6;
+    }
+    
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    /* Services */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .service {
+      background: #fff;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .service h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #0073e6;
+    }
+    
+    .service p {
+      font-size: 16px;
+    }
+    
+    /* Contact Form */
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .contact label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .contact input[type="submit"] {
+      background-color: #0073e6;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .contact input[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav ul li {
+        margin: 10px 0;
+      }
+      
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img>logo.png
+      </img>
+        <h2>        </h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Innovative IT Solutions</h1>
+      <p>We provide cutting-edge technology and consultancy to help your business thrive in the digital age.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        At Your IT Business, we are dedicated to delivering innovative solutions that streamline and upgrade your technological infrastructure. Our team of experts harnesses the latest in IT advancements to help you navigate the digital landscape.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service">
+          <h3>IT Consulting</h3>
+          <p>Strategy, planning, and execution advice to align your IT with your business goals.</p>
+        </div>
+        <div class="service">
+          <h3>Network Solutions</h3>
+          <p>Secure, robust, and scalable network architecture for seamless operations.</p>
+        </div>
+        <div class="service">
+          <h3>Cloud Services</h3>
+          <p>Transition to cloud-based infrastructures for efficiency and cost savings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="mailto:Support@heyian.tech" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+        
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your IT Business. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>

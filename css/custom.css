@@ -1,1 +1,8 @@
 /* Removed unused CSS selectors and rules */
+
+/* Added font-display: swap to @font-face rules */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/customfont.woff2') format('woff2');
+    font-display: swap;
+}

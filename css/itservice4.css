@@ -1792,6 +1792,16 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 		overflow: visible !important
 	}
 }
+/* Updated color palette to approved colors */
+.menu {
+    background-color: #008DB9; /* Updated to approved main color */
+}
+.banner {
+    background-color: #00B989; /* Updated to approved secondary color */
+}
+.button {
+    color: #0031b9; /* Updated to approved accent color */
+}
 #Header_wrapper, #Intro {
 	background-color: #321949;
 }

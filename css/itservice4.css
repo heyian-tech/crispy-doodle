@@ -1876,7 +1876,7 @@ h6, h6 a, h6 a:hover, a.content_link .title {
 .button-stroke .button_theme:hover, .button-stroke button:hover, .button-stroke input[type="submit"]:hover, .button-stroke input[type="reset"]:hover, .button-stroke input[type="button"]:hover {
 	background-color: #ff9329;
 }
-.button-default .single_add_to_cart_button, .button-flat .single_add_to_cart_button, .button-round .single_add_to_cart_button, .button-default .woocommerce .button:disabled, .button-flat .woocommerce .button:disabled, .button-round .woocommerce .button:disabled, .button-default .woocommerce .button.alt, .button-flat .woocommerce .button.alt, .button-round .woocommerce .button.alt {
+.button-default .single_add_to_cart_button, .button-flat .single_add_to_cart_button, .button-round .single_add_to_cart_button, .button-default .woocommerce .button:disabled, .button-flat .woocommerce .button:disabled, .button-round .woocommerce .button:disabled, .button-default .woocommerce .button.alt .button-flat .woocommerce .button.alt, .button-round .woocommerce .button.alt {
 	background-color: #ff9329 !important;
 }
 .button-stroke .single_add_to_cart_button:hover, .button-stroke #place_order:hover {
@@ -2007,10 +2007,10 @@ hr.hr_color, .hr_color hr, .hr_dots span {
 	color: #bbbbbb
 }
 #Action_bar .contact_details a {
-	color: #ff9329
+	color: #008DB9
 }
 #Action_bar .contact_details a:hover {
-	color: #f87c01
+	color: #00B989
 }
 #Action_bar .social li a, #Header_creative .social li a, #Action_bar:not(.creative) .social-menu a {
 	color: #bbbbbb
@@ -2028,10 +2028,10 @@ hr.hr_color, .hr_color hr, .hr_dots span {
 	color: #cccccc;
 }
 #Footer a {
-	color: #ff9329;
+	color: #008DB9;
 }
 #Footer a:hover {
-	color: #f87c01;
+	color: #00B989;
 }
 #Footer h1, #Footer h1 a, #Footer h1 a:hover, #Footer h2, #Footer h2 a, #Footer h2 a:hover, #Footer h3, #Footer h3 a, #Footer h3 a:hover, #Footer h4, #Footer h4 a, #Footer h4 a:hover, #Footer h5, #Footer h5 a, #Footer h5 a:hover, #Footer h6, #Footer h6 a, #Footer h6 a:hover {
 	color: #fff;
@@ -2058,10 +2058,10 @@ hr.hr_color, .hr_color hr, .hr_dots span {
 	color: #cccccc;
 }
 #Sliding-top a {
-	color: #ff9329;
+	color: #008DB9;
 }
 #Sliding-top a:hover {
-	color: #f87c01;
+	color: #00B989;
 }
 #Sliding-top h1, #Sliding-top h1 a, #Sliding-top h1 a:hover, #Sliding-top h2, #Sliding-top h2 a, #Sliding-top h2 a:hover, #Sliding-top h3, #Sliding-top h3 a, #Sliding-top h3 a:hover, #Sliding-top h4, #Sliding-top h4 a, #Sliding-top h4 a:hover, #Sliding-top h5, #Sliding-top h5 a, #Sliding-top h5 a:hover, #Sliding-top h6, #Sliding-top h6 a, #Sliding-top h6 a:hover {
 	color: #fff;
@@ -2234,10 +2234,10 @@ input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus,
 		color: #222222
 	}
 	#Action_bar .contact_details a {
-		color: #ff9329
+		color: #008DB9
 	}
 	#Action_bar .contact_details a:hover {
-		color: #f87c01
+		color: #00B989
 	}
 	#Action_bar .social li a, #Action_bar .social-menu a {
 		color: #bbbbbb !important
@@ -2258,8 +2258,8 @@ form input.display-none {
 	display: inline-block;
 }
 .itservice4-heading2 {
-	color: #ff9329;
-	border-bottom: 1px solid #ff9329;
+	color: #008DB9;
+	border-bottom: 1px solid #008DB9;
 	display: inline-block;
 }
 @media only screen and (min-width: 768px) {

@@ -599,16 +599,13 @@ h6 {
 	height: 120px;
 }
 #Top_bar .menu>li>a {
-	padding: 30px 0;
+	padding: 15px 20px;
+	background-color: #008DB9;
+	color: #ffffff;
 }
-.menu-highlight:not(.header-creative) #Top_bar .menu>li>a {
-	margin: 35px 0;
-}
-.header-plain:not(.menu-highlight) #Top_bar .menu>li>a span:not(.description) {
-	line-height: 120px;
-}
-.header-fixed #Top_bar .menu>li>a {
-	padding: 45px 0;
+#Top_bar .menu>li>a:hover {
+	background-color: #005F73;
+	color: #ffffff;
 }
 #Top_bar .top_bar_right, .header-plain #Top_bar .top_bar_right {
 	height: 120px;
@@ -2592,4 +2589,25 @@ p.flv_align_right, div.flv_align_right {
 #Top_bar {
     background-color: #008DB9;
     color: #ffffff;
+}
+.floating-help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.floating-help-button:hover {
+    background-color: #45a049; /* Darker green */
 }

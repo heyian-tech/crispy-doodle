@@ -2584,3 +2584,12 @@ p.flv_align_right, div.flv_align_right {
 #contactform #submit, #newsletterform input {
 	width: 100%;
 }
+.menu_wrapper {
+    background-color: #008DB9;
+    color: #ffffff;
+}
+
+#Top_bar {
+    background-color: #008DB9;
+    color: #ffffff;
+}

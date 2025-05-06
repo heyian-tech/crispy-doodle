@@ -1671,7 +1671,6 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 	-webkit-border-radius: 0px 4px 4px 4px;
 	border-radius: 0 4px 4px 4px;
 }
-/* Removed empty ruleset for #Header .secondary-menu li ul li */
 #Header .secondary-menu li ul li:last-child {
 	border-bottom: 0;
 }
@@ -4911,74 +4910,6 @@ html, body {
 		left: 49px;
 		right: auto;
 	}
-	/* Header mobile | minimal | headers compatibility */
-	.mobile-header-mini.header-plain #Top_bar .top_bar_right {
-		margin-right: 5px;
-	}
-	.mobile-header-mini.header-plain #Top_bar a#header_cart {
-		line-height: 60px!important;
-		border: none;
-		padding: 0 5px;
-	}
-	.mobile-header-mini.header-plain #Top_bar a#search_button {
-		line-height: 60px!important;
-		border: none;
-		padding: 0 3px;
-	}
-	.mobile-header-mini.header-plain #Top_bar .wpml-languages {
-		height: 60px!important;
-		border: none;
-		padding: 0 5px 0 10px;
-		top: 0;
-	}
-	.mobile-header-mini.header-plain #Top_bar .wpml-languages a.active {
-		line-height: 60px!important;
-	}
-	.mobile-header-mini.header-plain #Top_bar .wpml-languages:hover a.active {
-		background: none;
-	}
-	.mobile-header-mini #Header_creative #Top_bar {
-		width: 100%;
-		margin: 0;
-	}
-	.mobile-header-mini #Header_creative #Top_bar #header_cart {
-		top: 20px;
-	}
-	.mobile-header-mini #Header_creative #Top_bar #search_button {
-		top: 19px;
-	}
-	.mobile-header-mini #Header_creative #Top_bar .wpml-languages {
-		top: 13px;
-	}
-	.mobile-header-mini .overlay-menu-toggle {
-		font-size: 22px;
-		top: 8px;
-		margin: 0!important;
-	}
-	/* Header mobile | sticky */
-	.mobile-sticky #Top_bar.is-sticky {
-		position: fixed !important;
-	}
-	.mobile-sticky #Top_bar.is-sticky #logo {
-		margin-top: 0;
-		margin-bottom: 0;
-		height: 60px!important;
-		line-height: 60px!important;
-	}
-	.mobile-sticky #Top_bar.is-sticky a.responsive-menu-toggle {
-		top: 30px!important;
-	}
-	.mobile-sticky #Top_bar.is-sticky .top_bar_right {
-		display: none;
-	}
-	.mobile-sticky #Top_bar #menu {
-		overflow: auto;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.mobile-header-mini.mobile-sticky #Top_bar .top_bar_right {
-		display: block;
-	}
 	/* Header mobile | transparent */
 	.mobile-tr-header #Action_bar, .mobile-tr-header #Top_bar, .mobile-tr-header #Top_bar .top_bar_right {
 		background: none!important;
@@ -5209,7 +5140,7 @@ html, body {
 	/* Portfolio --------------- */
 	.portfolio_group .portfolio-item {
 		width: 100%!important;
-		margin: 0 0 20px!important;
+		margin:  0 0 20px!important;
 		float: none;
 	}
 	.section.full-width .portfolio_group .portfolio-item {

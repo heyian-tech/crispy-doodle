@@ -92,3 +92,40 @@ function submitFinished( response ) {
     $('#contactForm').delay(messageDelay+500).fadeIn();
   }
 }
+
+$(document).ready(function() {
+  $('#freescoutForm').on('submit', function(e) {
+      e.preventDefault();
+
+      const formData = {
+          name: $('#freescoutName').val(),
+          email: $('#freescoutEmail').val(),
+          subject: $('#freescoutSubject').val(),
+          message: $('#freescoutMessage').val()
+      };
+
+      $('#freescoutSubmit').prop('disabled', true).text('Sending...');
+
+      $.ajax({
+          url: 'php/freescout.php',
+          type: 'POST',
+          data: formData,
+          success: function(response) {
+              const res = JSON.parse(response);
+              if (res.status === 'success') {
+                  $('#freescoutResponse').text(res.message).css('color', 'green').show();
+                  $('#freescoutForm')[0].reset();
+                  alert('Your message has been sent successfully!');
+              } else {
+                  $('#freescoutResponse').text(res.message).css('color', 'red').show();
+              }
+          },
+          error: function() {
+              $('#freescoutResponse').text('An error occurred. Please try again later.').css('color', 'red').show();
+          },
+          complete: function() {
+              $('#freescoutSubmit').prop('disabled', false).text('Send Message');
+          }
+      });
+  });
+});

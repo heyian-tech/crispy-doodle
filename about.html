@@ -54,6 +54,7 @@
             justify-content: space-around;
             background-color: #008db9;
             padding: 10px 0;
+            align-items: center; /* Ensures the menu aligns with the logo */
         }
 
         #menu a {
@@ -71,8 +72,8 @@
 
         /* Section Styling */
         .section {
-            padding: 60px 20px;
-            margin-bottom: 30px;
+            padding: 40px 20px; /* Reduced padding */
+            margin-bottom: 20px; /* Reduced margin */
         }
 
         .section:nth-child(even) {
@@ -81,6 +82,10 @@
 
         .section:nth-child(odd) {
             background-color: #ffffff;
+        }
+
+        hr.no_line {
+            display: none; /* Hides unnecessary horizontal lines */
         }
 
         /* Buttons */
@@ -127,6 +132,13 @@
         img[alt] {
             border: 2px solid #ddd;
             padding: 5px;
+        }
+
+        /* Made the company logo a focal point */
+        .logo img {
+            max-width: 150px; /* Adjusted size for prominence */
+            margin: 0 auto; /* Centered the logo */
+            display: block;
         }
     </style>
 

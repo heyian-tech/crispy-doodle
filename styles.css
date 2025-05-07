@@ -38,9 +38,6 @@ body {
 .navbar .logo {
     background: url('https://photos.heyian.cloud/heyian_logo_XL.png') no-repeat left center;
     background-size: 300%;
-    background-size: contain;
-    width: px; /* Adjust size as needed */
-    height: 60px; /* Adjust size as needed */
     text-indent: -9999px; /* Hide text */
     overflow: hidden;
 }

@@ -1,7 +1,6 @@
 a.action_button {
 	top: 50px;
 	border-radius: 0;
-}
 .is-sticky a.action_button {
 	top: 10px;
 }
@@ -17,13 +16,14 @@ a.action_button {
 	background-image: url(https://photos.heyian.cloud/itservice-footer-bg.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
-	background-size: contain
+	background-size: contain;
+	background-color: var(--accent-color);
 }
 html {
 	background-color: #fff;
 }
 #Wrapper, #Content {
-	background-color: #fff;
+	background-color: var(--white-color);
 }
 body, button, span.date_label, .timeline_items li h3 span, input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], input[type="tel"], input[type="email"], textarea, select, .offer_li .title h3 {
 	font-family: "DM Sans", Helvetica, Arial, sans-serif;
@@ -36,6 +36,7 @@ body, button, span.date_label, .timeline_items li h3 span, input[type="submit"],
 }
 h1, h2, h3, h4, .text-logo #logo {
 	font-family: "DM Sans", Helvetica, Arial, sans-serif;
+	color: var(--primary-color);
 }
 h5, h6 {
 	font-family: "DM Sans", Helvetica, Arial, sans-serif;
@@ -1828,8 +1829,9 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 #Footer {
 	background-color: #321949;
 }
-body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_list ul li a, .list_item a, .list_item a:hover, .widget_recent_entries ul li a, .flat_box a, .flat_box a:hover, .story_box .desc, .content_slider.carouselul li a .title, .content_slider.flat.description ul li .desc, .content_slider.flat.description ul li a .desc, .post-nav.minimal a i {
+body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_list ul li a, .list_item a, .list_item a:hover, .widget_recent_entries ul li a, .flat_box a, .flat_box a:hover, .story_box .desc, .content_slider.carouselul li a .title {
 	color: #525252;
+}
 }
 .post-nav.minimal a svg {
 	fill: #525252;

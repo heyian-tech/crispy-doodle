@@ -336,7 +336,7 @@ body:not(.template-slider) #Content {
 	max-width: 1220px;
 }
 .rev_slider ul {
-	margin: 0 !important;
+	margin: 0;
 }
 .tp-static-layers {
 	z-index: 200;
@@ -4375,8 +4375,19 @@ body.layout-boxed .vc_row-no-padding .wpb_column {
 |
 */
 
-html, body {
-	overflow-x: hidden;
+/* Standardizing colors to use CSS variables */
+:root {
+    --primary-color: #00b989;
+    --secondary-color: #008db9;
+    --accent-color: #0031b9;
+}
+
+/* Replacing hardcoded colors with variables */
+.header {
+    background-color: var(--primary-color);
+}
+.footer {
+    background-color: var(--accent-color);
 }
 
 /*																								> 1240
@@ -5133,11 +5144,11 @@ html, body {
 .wp-caption-text.hide-mobile {
 	display: none;
 }
-/* Post nav */
-.post-nav {
-	padding: 10px 10px 4px;
-}
-/* Portfolio --------------- */
+	/* Post nav */
+	.post-nav {
+		padding: 10px 10px 4px;
+	}
+	/* Portfolio --------------- */
 .portfolio_group .portfolio-item {
 	width: 100%!important;
 	margin:  0 0 20px!important;
@@ -5178,7 +5189,7 @@ html, body {
 body:not(.with_aside) .portfolio_group.list .portfolio-item .portfolio-item-fw-wrapper {
 	width: 380px;
 }
-/* Project decription */
+	/* Project decription */
 .project-description li, .project-description li.one-third {
 	width: 100%;
 	border-width: 0 0 1px;
@@ -5186,7 +5197,7 @@ body:not(.with_aside) .portfolio_group.list .portfolio-item .portfolio-item-fw-w
 .project-description li:last-child {
 	border-bottom: 0;
 }
-/* Portfolio | Exposure */
+	/* Portfolio | Exposure */
 .portfolio_group.exposure .portfolio-item {
 	margin: 0!important;
 	overflow: hidden;
@@ -5206,16 +5217,20 @@ body:not(.with_aside) .portfolio_group.list .portfolio-item .portfolio-item-fw-w
 .full-width .portfolio_group.exposure .portfolio-item .desc-inner {
 	top: 30px;
 }
-/* Portfolio | Flat */
+	/* Portfolio | Flat */
 .portfolio_group.flat .portfolio-item {
 	margin-bottom: 0!important;
 }
-/* Portfolio | Grid */
+	/* Portfolio | Grid */
 ul.portfolio_grid li {
 	width: 100%!important;
 	float: left;
 }
-/* Portfolio | Masonry Flat */
+	/* Portfolio | Masonry Flat */
 .portfolio_group.masonry-flat .portfolio-item, .portfolio_group.masonry-flat .portfolio-item.wide {
 	width: 100%!important;
+}
+.portfolio_group.masonry-flat .portfolio-item.wide {
+	margin-bottom: 20px!important;
+}
 }

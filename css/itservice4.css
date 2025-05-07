@@ -2105,7 +2105,7 @@ blockquote, blockquote a, blockquote a:hover {
 	background: rgba(255, 255, 255, 0.4);
 }
 .sliding_box .desc_wrapper {
-	background: #ff9329;
+	background: url(images/sliding_box_bg.png);
 }
 .sliding_box .desc_wrapper:after {
 	border-bottom-color: #ff9329;

@@ -14,7 +14,7 @@ a.action_button {
 	border-radius: 50px;
 }
 #Footer {
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/itservice-footer-bg.png);
+	background-image: url(https://photos.heyian.cloud/itservice-footer-bg.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: contain
@@ -1790,14 +1790,22 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	}
 }
 /* Updated color palette to approved colors */
+:root {
+    --primary-color: #00b989;
+    --secondary-color: #008db9;
+    --accent-color: #0031b9;
+    --white-color: #ffffff;
+}
+
+/* Standardizing colors to match the approved palette */
 .menu {
-    background-color: #008DB9; /* Updated to approved main color */
+    background-color: var(--secondary-color);
 }
 .banner {
-    background-color: #00B989; /* Updated to approved secondary color */
+    background-color: var(--primary-color);
 }
 .button {
-    color: #0031b9; /* Updated to approved accent color */
+    color: var(--accent-color);
 }
 #Header_wrapper, #Intro {
 	background-color: #321949;
@@ -2105,7 +2113,7 @@ blockquote, blockquote a, blockquote a:hover {
 	background: rgba(255, 255, 255, 0.4);
 }
 .sliding_box .desc_wrapper {
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/sliding_box_bg.png);
+	background: url(https://photos.heyian.cloud/heyian-webbucket-main/sliding_box_bg.png);
 }
 .sliding_box .desc_wrapper:after {
 	border-bottom-color: #ff9329;

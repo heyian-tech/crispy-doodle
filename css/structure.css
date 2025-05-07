@@ -891,7 +891,7 @@ body.nice-scroll:not(.layout-boxed) {
 }
 .fixed-nav.format-quote .photo {
 	background-color: #eee;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/blockquote.png");
+	background-image: url(https://photos.heyian.cloud/heyian-webbucket-main/blockquote.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 50% auto;
@@ -901,7 +901,7 @@ body.nice-scroll:not(.layout-boxed) {
 }
 .fixed-nav.format-link .photo {
 	background-color: #eee;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/link.png");
+	background-image: url(https://photos.heyian.cloud/heyian-webbucket-main/link.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -930,7 +930,7 @@ body.nice-scroll:not(.layout-boxed) {
 }
 #Filters .filters_buttons {
 	padding: 15px 15px;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/stripes/stripes_5_b.png);
+	background-image: url(https://photos.heyian.cloud/stripes/stripes_5_b.png);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1189,7 +1189,7 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 	position: absolute;
 	left: -10px;
 	top: 2px;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/top_bar_right_shadow.png);
+	background-image: url(https://photos.heyian.cloud/top_bar_right_shadow.png);
 	background-repeat: repeat-y;
 	-moz-transform: skewX(0deg) skewY(-25deg);
 	-webkit-transform: skewX(0deg) skewY(-25deg);
@@ -1576,7 +1576,7 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 	z-index: 205;
 	margin: 0;
 	display: none;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/box_shadow.png);
+	background-image: url(https://photos.heyian.cloud/box_shadow.png);
 	background-repeat: repeat-x;
 	background-position: left top;
 }
@@ -2413,7 +2413,7 @@ body.header-stack:not(.template-slider) #Header {
 	padding-left: 200px;
 	margin-bottom: 0;
 	padding-bottom: 40px;
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/timeline_right.png) no-repeat 90px top;
+	background: url(https://photos.heyian.cloud/timeline_right.png) no-repeat 90px top;
 }
 .timeline .post-item:last-child {
 	padding-bottom: 20px;
@@ -2502,7 +2502,7 @@ body.header-stack:not(.template-slider) #Header {
 .post-nav {
 	padding: 10px 10px 4px 130px;
 	margin-bottom: 20px;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/stripes/stripes_5_b.png);
+	background-image: url(https://photos.heyian.cloud/stripes/stripes_5_b.png);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -2674,7 +2674,7 @@ body.header-stack:not(.template-slider) #Header {
 .section-post-related .format-link .image_frame {
 	height: 180px;
 	background-color: rgba(255, 255, 255, .5);
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/link.png");
+	background-image: url(https://photos.heyian.cloud/link.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -2682,7 +2682,7 @@ body.header-stack:not(.template-slider) #Header {
 	display: block;
 	height: 180px;
 	background-color: rgba(255, 255, 255, .5);
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/photo.png");
+	background-image: url(https://photos.heyian.cloud/photo.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -2960,13 +2960,13 @@ body:not(.template-slider) .widget-area {
 
 .Recent_posts ul li.format-link .photo {
 	background-color: #eee;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/link.png");
+	background-image: url(https://photos.heyian.cloud/link.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 .Recent_posts ul li.format-quote .photo {
 	background-color: #eee;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/blockquote.png");
+	background-image: url(https://photos.heyian.cloud/blockquote.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 40% auto;
@@ -3107,7 +3107,7 @@ body:not(.template-slider) .widget-area {
 /* Removed empty ruleset for .widget_mfn_recent_comments */
 .widget_mfn_recent_comments ul li {
 	padding-bottom: 15px;
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/recent_comments.png) no-repeat 4px top;
+	background: url(https://photos.heyian.cloud/recent_comments.png) no-repeat 4px top;
 	padding-left: 40px;
 	position: relative;
 }
@@ -3146,7 +3146,7 @@ body:not(.template-slider) .widget-area {
 .widget_recent_comments ul li {
 	padding-bottom: 5px;
 	padding-top: 6px;
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/recent_comments.png) no-repeat 4px top;
+	background: url(https://photos.heyian.cloud/recent_comments.png) no-repeat 4px top;
 	padding-left: 40px;
 	position: relative;
 }
@@ -3777,7 +3777,7 @@ body:not(.with_aside) .portfolio_group.list .portfolio-item .portfolio-item-fw-w
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	border-radius: 3px;
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/stripes/stripes_10_w.png);
+	background-image: url(https://photos.heyian.cloud/stripes/stripes_10_w.png);
 }
 #comments .commentlist>li .reply a:hover.comment-reply-link {
 	text-decoration: none;
@@ -3944,7 +3944,7 @@ body.error404:not(.events-archive) #Content {
 	width: 50px !important;
 	height: 44px !important;
 	padding: 0 !important;
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/contact_form_error.png") !important;
+	background: url(https://photos.heyian.cloud/contact_form_error.png) !important;
 	overflow: hidden;
 	text-indent: -9999px !important;
 	padding: 0;
@@ -4058,7 +4058,7 @@ span.wpcf7-form-control-wrap .wpcf7-quiz, span.wpcf7-form-control-wrap .wpcf7-se
 ================================================== */
 
 .portfolio_slider_ul, ul.testimonials-slider {
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/preloader.gif") no-repeat center center;
+	background: url(https://photos.heyian.cloud/preloader.gif) no-repeat center center;
 }
 ul.testimonials-slider {
 	max-height: 260px;
@@ -4224,7 +4224,7 @@ ul.testimonials-slider {
 /* Fancy heading */
 
 .dark .fancy_heading_line {
-	background-image: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/fancy_heading_hr_dark.png);
+	background-image: url(https://photos.heyian.cloud/fancy_heading_hr_dark.png);
 }
 
 /* Content slider */
@@ -4271,7 +4271,7 @@ ul.testimonials-slider {
 	height: 100%;
 	width: 100%;
 	z-index: 3;
-	background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/videomask.png) repeat center;
+	background: url(https://photos.heyian.cloud/fancy_heading_hr_dark.png) repeat center;
 }
 .section.has-video .section_video video {
 	position: absolute;
@@ -4602,7 +4602,7 @@ html, body {
 		right: 0;
 		top: 0;
 		border-left: 1px solid rgba(0, 0, 0, 0.03);
-		background: url(https://fcdafc0f1db7e22eca040087f94a6621.r2.cloudflarestorage.com/heyian-webbucket-main/menu-plus.png) center no-repeat;
+		background: url(https://photos.heyian.cloud/menu-plus.png) center no-repeat;
 	}
 	.header-simple #Top_bar #menu ul li.hover>.menu-toggle {
 		background: none !important;

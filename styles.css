@@ -34,9 +34,19 @@ body {
     font-weight: bold;
 }
 
+/* Updated the banner to include the company logo */
+.navbar .logo {
+    background: url('https://photos.heyian.cloud/heyian_logo_XL.png') no-repeat left center;
+    background-size: contain;
+    width: 200px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    text-indent: -9999px; /* Hide text */
+    overflow: hidden;
+}
+
 /* Hero Section */
 header.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://photos.heyian.cloud/itservice-slider-bg.png') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 5rem 1rem;
@@ -185,4 +195,10 @@ header.hero .cta {
     --background-color: #121212;
     --text-color: #ffffff;
     --primary-color: #1E90FF;
+}
+
+/* Updated hover effect for service cards */
+.services .card:hover {
+    transform: translateY(-10px);
+    background-color: #0031b9;
 }

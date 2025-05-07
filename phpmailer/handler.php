@@ -22,6 +22,11 @@ $validator->field('Message')->maxLength(6000);
 
 
 
-$pp->sendEmailTo('someone@gmail.com'); // ← Your email here
+$pp->sendEmailTo('admin@heyian.tech'); // ← Your email here
 
+$pp->setEmailHeader('X-Permitted-Cross-Domain-Policies', 'none');
+$pp->setEmailHeader('X-Content-Type-Options', 'nosniff');
+$pp->setEmailHeader('X-Frame-Options', 'DENY');
+$pp->setEmailHeader('X-XSS-Protection', '1; mode=block');
+$pp->setEmailHeader('X-Download-Options', 'noopen');
 echo $pp->process($_POST);

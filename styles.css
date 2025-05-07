@@ -195,6 +195,25 @@ header.hero .cta {
     --primary-color: #1E90FF;
 }
 
+[data-theme="light"] {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007BFF;
+}
+
+/* Ensure all text elements adapt to theme */
+body, .navbar, .hero-content, .about-content, .services, .portfolio, .testimonials, .contact-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Smooth border for toggle button */
+button {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Updated hover effect for service cards */
 .services .card:hover {
     transform: translateY(-10px);

@@ -35,11 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleThemeButton.style.right = '10px';
     toggleThemeButton.style.width = '50px';
     toggleThemeButton.style.height = '50px';
-    toggleThemeButton.style.border = 'none';
+    toggleThemeButton.style.border = '2px solid var(--primary-color)';
     toggleThemeButton.style.borderRadius = '50%';
     toggleThemeButton.style.backgroundSize = 'cover';
     toggleThemeButton.style.cursor = 'pointer';
     toggleThemeButton.style.backgroundImage = "url('assets/icons/day-icon.png')";
+    toggleThemeButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     document.body.appendChild(toggleThemeButton);
 
     toggleThemeButton.addEventListener('click', () => {

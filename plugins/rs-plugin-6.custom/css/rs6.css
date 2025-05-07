@@ -129,7 +129,6 @@ rs-sbg-px { pointer-events: none }
   font-family: "revicons";
   font-style: normal;
   font-weight: normal;
-  speak: none;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -197,7 +196,6 @@ rs-module [class*=" fa-"]:before,
     font-style: normal;
     font-weight: 400;
    
-    speak: none;
     display: inline-block;
     text-decoration: inherit;
     width: auto;
@@ -384,6 +382,9 @@ rs-module-wrap,
 rs-module .rs-layer,
 rs-module img {
 	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;   
@@ -426,6 +427,7 @@ rs-carousel-space { clear:both;display:block;width:100%;height:1px;position:rela
 .rs-layer.rs-selectable {
 	-moz-user-select: all;
 	-khtml-user-select: all;
+	user-select: all;
 	-webkit-user-select: all;
 	-o-user-select: all;	
 }
@@ -945,9 +947,9 @@ rs-dotted.threexthreewhite		{	background:url(../assets/gridtile_3x3_white.png)}
 	background: lab(21.25% 0 0);	
 }
 
-.rev-scroll-btn.revs-fulldark,  {
+.rev-scroll-btn.revs-fulldark {
 	background: #333;
-	border:none;
+	border: none;
 }
 
 .rev-scroll-btn.revs-fulldark  span {

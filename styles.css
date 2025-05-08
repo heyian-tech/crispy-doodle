@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Updated font style for a modern and professional look */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -15,11 +15,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
+    background-color: #008db9; /* Updated navbar color while keeping transparency */
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
+    opacity: 0.75; /* Retains the same transparency */
 }
 
 .nav-links {
@@ -50,6 +51,14 @@ header.hero {
     padding: 5rem 1rem;
 }
 
+header.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: normal;
+    animation: none; /* Removed the fade-in animation */
+}
+
 header.hero .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -69,6 +78,12 @@ header.hero .cta {
     color: #333;
 }
 
+/* Updated hover color for 'Get in Touch' button */
+.cta.secondary:hover {
+    background-color: #008db9; /* Updated hover color for 'Get in Touch' button */
+    color: white; /* Ensures text remains readable */
+}
+
 /* About Section */
 .about-content {
     display: flex;
@@ -80,6 +95,25 @@ header.hero .cta {
 .about-content img {
     max-width: 300px;
     border-radius: 10px;
+}
+
+.about-content div {
+    font-family: 'Consolas', 'Courier New', monospace; /* Changed to a different monospaced font for a fresh IT-related look */
+}
+
+/* About Me title animation */
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #008db9; /* Matches the 'How I Work' title color */
+    position: relative;
+    animation: none; /* Default state without animation */
+}
+
+.about-content h2.animate {
+    animation: slideIn 2s ease-in-out;
 }
 
 /* Services Section */
@@ -99,6 +133,9 @@ header.hero .cta {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid;
+    border-image-source: linear-gradient(to bottom, #008CB9 0%, #5100B9 50%, #B90042 100%);
+    border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
 }
 
 /* Portfolio Section */
@@ -154,6 +191,8 @@ header.hero .cta {
     background-color: #333;
     color: white;
     text-align: center;
+    font-size: 1.5rem; /* Increased font size for better readability */
+    line-height: 2; /* Adjusted line height for improved spacing */
 }
 
 .carousel {
@@ -191,7 +230,7 @@ header.hero .cta {
 
 [data-theme="dark"] {
     --background-color: #121212;
-    --text-color: #ffffff;
+    --text-color: #0031b9; /* Changes font color to #0031b9 in dark mode */
     --primary-color: #1E90FF;
 }
 
@@ -217,5 +256,201 @@ button {
 /* Updated hover effect for service cards */
 .services .card:hover {
     transform: translateY(-10px);
-    background-color: #0031b9;
+    background-color: #008db9; /* Updated hover color for service cards */
+}
+
+/* Light/Dark Toggle Button */
+.light-dark-toggle {
+    position: fixed;
+    bottom: 1rem; /* Adds padding from the bottom */
+    right: 1rem; /* Adds padding from the right */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.light-dark-toggle img {
+    width: 40px; /* Adjusts the size of the toggle icon */
+    height: 40px; /* Ensures the icon maintains a square shape */
+}
+
+/* Changes text color in the services section to black in night mode */
+[data-theme="dark"] .services .card {
+    color: black; /* Changes text color in the services section to black in night mode */
+}
+
+/* How I Work Section */
+.how-i-work {
+    padding: 2rem 1rem;
+    background-color: white; /* Sets background color to white in light mode */
+    text-align: center; /* Centers the content */
+}
+
+[data-theme="dark"] .how-i-work {
+    background-color: black; /* Retains black background in dark mode */
+}
+
+.how-i-work h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #008db9; /* Updated title color to #008db9 */
+    position: relative;
+    animation: none; /* Default state without animation */
+}
+
+.how-i-work h2.animate {
+    animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.how-i-work p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-color); /* Ensures readability */
+}
+
+/* Ensures text in the 'How I Work' section contrasts in night mode */
+[data-theme="dark"] .how-i-work p {
+    color: #0031b9; /* Reverted text color in the 'How I Work' section to #0031b9 in dark mode */
+}
+
+/* Text color in light mode for About Me and How I Work sections */
+.about-content p, .how-i-work p {
+    color: black; /* Text color in light mode */
+}
+
+/* Text color in dark mode for About Me and How I Work sections */
+[data-theme="dark"] .about-content p, [data-theme="dark"] .how-i-work p {
+    color: white; /* Text color in dark mode */
+}
+
+/* Testimonial Box Styling */
+.testimonial-box {
+    background: #008db9; /* Changed background color to #008db9 */
+    border: 3px solid;
+    border-image-source: linear-gradient(to bottom, #008CB9 0%, #5100B9 50%, #B90042 100%);
+    border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 1.5rem; /* Adds spacing inside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 800px;
+    margin: 1rem auto; /* Centers the box */
+    color: black; /* Reverted text color to black */
+    font-family: 'Georgia', serif; /* Changed font to a softer and more personal style */
+}
+
+.testimonial-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adds a more pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.testimonials h2 {
+    font-size: 3rem; /* Larger font size to make the title stand out */
+    font-weight: bold; /* Emphasizes the title */
+    text-transform: uppercase; /* Adds a professional touch */
+    color: #008db9; /* Matches the section's theme */
+    letter-spacing: 2px; /* Enhances readability */
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff; /* Changes font color to white in dark mode */
+    --primary-color: #1E90FF;
+}
+
+/* Changes the entire 'Why Hey Ian?' section background to black in dark mode */
+[data-theme="dark"] .testimonials {
+    background-color: black;
+}
+
+/* Keeps the text color white in dark mode */
+[data-theme="dark"] .testimonial-box {
+    color: black; /* Changes text color to black in dark mode */
+}
+
+/* Contact Me Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 4rem; /* Restored previous padding for more spacing */
+    position: relative; /* Allows positioning of arrows */
+}
+
+.contact-form, .dwservice-placeholder {
+    flex: 1;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    max-width: 600px;
+}
+
+.dwservice-placeholder {
+    text-align: center;
+    max-width: 600px;
+}
+
+.dwservice-placeholder h3 {
+    font-size: 1.8rem;
+    color: #008db9;
+    margin-bottom: 1rem;
+}
+
+.dwservice-placeholder p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.contact h2 {
+    text-align: center; /* Centers the title above the two boxes */
+    font-size: 2.5rem; /* Sets a typical corporate font size */
+    font-weight: 600; /* Adjusts weight for a professional look */
+    color: #333; /* Neutral corporate color */
+    margin-bottom: 1rem; /* Reduced spacing below the title for a minimal but comfortable gap */
+}
+
+[data-theme="dark"] .contact h2 {
+    color: #0031b9; /* Changes 'Contact Me' title color to #0031b9 in dark mode only */
+}
+
+/* Animated arrow pointing from the 'Contact Me' title to the contact form */
+.contact-arrow {
+    position: absolute;
+    top: 3rem; /* Position below the title */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-left: 2px solid #008db9;
+    border-top: 2px solid #008db9;
+    transform: rotate(-45deg);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0) rotate(-45deg);
+    }
+    50% {
+        transform: translate(-50%, -10px) rotate(-45deg);
+    }
 }

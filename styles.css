@@ -210,6 +210,32 @@ header.hero .cta {
     border-radius: 10px;
 }
 
+.testimonials .testimonial-box {
+    position: relative;
+    background: #008db9; /* Chat bubble background color */
+    color: white; /* Text color inside the bubble */
+    border-radius: 15px; /* Rounded corners for the bubble */
+    padding: 1.5rem; /* Internal spacing */
+    max-width: 600px; /* Restrict width for readability */
+    margin: 1rem auto; /* Center the bubble */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    line-height: 1.8; /* Comfortable line spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.testimonials .testimonial-box::after {
+    content: '';
+    position: absolute;
+    top: -15px; /* Position the tail above the bubble */
+    left: 50%; /* Center the tail horizontally */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 15px; /* Adjust triangle orientation */
+    border-color: transparent transparent #008db9 transparent; /* Match the bubble color */
+}
+
 /* Contact Section */
 .contact {
     padding: 2rem 1rem;

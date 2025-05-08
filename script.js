@@ -29,24 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Dark/Light Mode Toggle
-    const toggleThemeButton = document.createElement('button');
-    toggleThemeButton.style.position = 'fixed';
-    toggleThemeButton.style.top = '10px';
-    toggleThemeButton.style.right = '10px';
-    toggleThemeButton.style.width = '50px';
-    toggleThemeButton.style.height = '50px';
-    toggleThemeButton.style.border = 'none';
-    toggleThemeButton.style.borderRadius = '50%';
-    toggleThemeButton.style.backgroundSize = 'cover';
-    toggleThemeButton.style.cursor = 'pointer';
-    toggleThemeButton.style.backgroundImage = "url('assets/icons/day-icon.png')";
-    document.body.appendChild(toggleThemeButton);
+    const toggleThemeButton = document.querySelector('.light-dark-toggle img');
 
     toggleThemeButton.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
-        toggleThemeButton.style.backgroundImage = newTheme === 'dark' ? "url('assets/icons/night-icon.png')" : "url('assets/icons/day-icon.png')";
+        toggleThemeButton.src = newTheme === 'dark' ? 'assets/icons/night-icon.png' : 'assets/icons/day-icon.png';
     });
 
     // Scroll Animations

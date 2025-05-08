@@ -20,6 +20,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    opacity: 0.75; /* Makes the navbar half-transparent */
 }
 
 .nav-links {
@@ -202,4 +203,17 @@ header.hero .cta {
 .services .card:hover {
     transform: translateY(-10px);
     background-color: #0031b9;
+}
+
+/* Light/Dark Toggle Button */
+.light-dark-toggle {
+    position: fixed;
+    bottom: 1rem; /* Adds padding from the bottom */
+    right: 1rem; /* Adds padding from the right */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.light-dark-toggle img {
+    width: 40px; /* Adjusts the size of the toggle icon */
+    height: 40px; /* Ensures the icon maintains a square shape */
 }

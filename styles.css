@@ -90,6 +90,8 @@ header.hero .cta {
     align-items: center;
     gap: 2rem;
     padding: 2rem 1rem;
+    background-color: black !important; /* Enforce black background color */
+    color: white; /* Ensure text is readable */
 }
 
 .about-content img {
@@ -329,18 +331,29 @@ button {
 
 /* Changes text color in the services section to black in night mode */
 [data-theme="dark"] .services .card {
-    color: black; /* Changes text color in the services section to black in night mode */
+    background: #333; /* Dark background for dark mode */
+    color: white; /* Light text for readability */
 }
 
 /* How I Work Section */
 .how-i-work {
     padding: 2rem 1rem;
-    background-color: white; /* Sets background color to white in light mode */
-    text-align: center; /* Centers the content */
+    text-align: center;
+    background-color: white; /* Keep background white in light mode */
+}
+
+.how-i-work .modern-box {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Brighter gradient for better contrast */
+    color: #000; /* Dark text for readability */
 }
 
 [data-theme="dark"] .how-i-work {
     background-color: black; /* Retains black background in dark mode */
+}
+
+[data-theme="dark"] .how-i-work .modern-box {
+    background: linear-gradient(to bottom, #222, #333); /* Darker gradient for better contrast */
+    color: #fff; /* White text for readability */
 }
 
 .how-i-work h2 {
@@ -357,6 +370,20 @@ button {
     animation: slideIn 2s ease-in-out;
 }
 
+.how-i-work p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* Modern dark gray text for sleekness */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    max-width: 800px;
+    margin: 0 auto; /* Center the text */
+    padding: 1rem 2rem; /* Add padding for a clean layout */
+    border: 2px solid #ccc; /* Subtle border for a modern look */
+    border-radius: 10px; /* Rounded corners for sleekness */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background: #f9f9f9; /* Light gray background for contrast */
+}
+
 @keyframes slideIn {
     from {
         left: -100px;
@@ -368,14 +395,6 @@ button {
     }
 }
 
-.how-i-work p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--text-color); /* Ensures readability */
-}
-
 /* Ensures text in the 'How I Work' section contrasts in night mode */
 [data-theme="dark"] .how-i-work p {
     color: #0031b9; /* Reverted text color in the 'How I Work' section to #0031b9 in dark mode */
@@ -383,12 +402,12 @@ button {
 
 /* Text color in light mode for About Me and How I Work sections */
 .about-content p, .how-i-work p {
-    color: black; /* Text color in light mode */
+    color: white; /* Text color in light mode */
 }
 
 /* Text color in dark mode for About Me and How I Work sections */
 [data-theme="dark"] .about-content p, [data-theme="dark"] .how-i-work p {
-    color: white; /* Text color in dark mode */
+    color: #008db9; /* Text color in dark mode */
 }
 
 /* Testimonial Box Styling */

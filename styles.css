@@ -15,7 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #008db9; /* Updated navbar color while keeping transparency */
+    background-color: rgba(0, 141, 185, 0.75) !important; /* Explicitly set navbar color with higher priority */
     color: white;
     position: sticky;
     top: 0;
@@ -209,42 +209,97 @@ header.hero .cta {
 }
 
 /* Contact Section */
-.contact-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.contact {
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-.map iframe {
+.contact h2 {
+    font-size: 2.5rem; /* Large corporate font size */
+    font-weight: 600; /* Professional weight */
+    color: #333; /* Neutral corporate color */
+    margin-bottom: 1rem; /* Small space below the title */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem; /* Slight gap between the boxes */
+    padding: 2rem; /* Comfortable spacing from page edges */
+}
+
+.contact-form, .dwservice-placeholder {
+    flex: 1;
+    background: white;
+    border: 4px solid #ccc; /* Made the borders heavier */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1.5rem; /* Internal spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Ensures consistent size */
+    height: auto; /* Ensures both boxes have the same area coverage */
+}
+
+.dwservice-placeholder {
+    height: 100%; /* Matches the height of the left box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+}
+
+.contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+    display: block;
     width: 100%;
-    height: 300px;
+    margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #008db9;
+    color: white;
     border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #005f8b;
+}
+
+.dwservice-placeholder {
+    text-align: center;
+    color: #333;
 }
 
 /* Dark/Light Mode Styles */
 :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007BFF;
+    --background-color: #ffffff; /* Default light mode background */
+    --text-color: #000000; /* Default light mode text */
+    --primary-color: #008db9; /* Default primary color */
 }
 
 [data-theme="dark"] {
-    --background-color: #121212;
-    --text-color: #0031b9; /* Changes font color to #0031b9 in dark mode */
-    --primary-color: #1E90FF;
+    --background-color: #121212; /* Dark mode background */
+    --text-color: #ffffff; /* Dark mode text */
+    --primary-color: #1E90FF; /* Dark mode primary color */
 }
 
-[data-theme="light"] {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007BFF;
-}
-
-/* Ensure all text elements adapt to theme */
-body, .navbar, .hero-content, .about-content, .services, .portfolio, .testimonials, .contact-content {
+body {
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
+}
+
+.navbar, .hero-content, .about-content, .services, .how-i-work, .testimonials, .contact-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Ensures all sections adapt to theme */
 }
 
 /* Smooth border for toggle button */
@@ -365,12 +420,6 @@ button {
     letter-spacing: 2px; /* Enhances readability */
 }
 
-[data-theme="dark"] {
-    --background-color: #121212;
-    --text-color: #ffffff; /* Changes font color to white in dark mode */
-    --primary-color: #1E90FF;
-}
-
 /* Changes the entire 'Why Hey Ian?' section background to black in dark mode */
 [data-theme="dark"] .testimonials {
     background-color: black;
@@ -379,78 +428,4 @@ button {
 /* Keeps the text color white in dark mode */
 [data-theme="dark"] .testimonial-box {
     color: black; /* Changes text color to black in dark mode */
-}
-
-/* Contact Me Section */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 4rem; /* Restored previous padding for more spacing */
-    position: relative; /* Allows positioning of arrows */
-}
-
-.contact-form, .dwservice-placeholder {
-    flex: 1;
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form {
-    max-width: 600px;
-}
-
-.dwservice-placeholder {
-    text-align: center;
-    max-width: 600px;
-}
-
-.dwservice-placeholder h3 {
-    font-size: 1.8rem;
-    color: #008db9;
-    margin-bottom: 1rem;
-}
-
-.dwservice-placeholder p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.contact h2 {
-    text-align: center; /* Centers the title above the two boxes */
-    font-size: 2.5rem; /* Sets a typical corporate font size */
-    font-weight: 600; /* Adjusts weight for a professional look */
-    color: #333; /* Neutral corporate color */
-    margin-bottom: 1rem; /* Reduced spacing below the title for a minimal but comfortable gap */
-}
-
-[data-theme="dark"] .contact h2 {
-    color: #0031b9; /* Changes 'Contact Me' title color to #0031b9 in dark mode only */
-}
-
-/* Animated arrow pointing from the 'Contact Me' title to the contact form */
-.contact-arrow {
-    position: absolute;
-    top: 3rem; /* Position below the title */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    border-left: 2px solid #008db9;
-    border-top: 2px solid #008db9;
-    transform: rotate(-45deg);
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translate(-50%, 0) rotate(-45deg);
-    }
-    50% {
-        transform: translate(-50%, -10px) rotate(-45deg);
-    }
 }

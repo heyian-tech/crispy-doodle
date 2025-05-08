@@ -18,7 +18,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#how-i-work">How I Work</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="hero-content">
@@ -63,7 +62,13 @@
 
         <section id="how-i-work" class="how-i-work">
             <h2>How I Work</h2>
-            <p>Flat-rate pricing for common services, with hourly billing for more complex projects. I’m upfront, fast to respond, and not here to upsell you something you don’t need. You’ll always know what you’re getting—and if something’s outside my scope, I’ll tell you straight.</p>
+            <ul>
+                <li>Flat-rate pricing for common services.</li>
+                <li>Hourly billing for more complex projects.</li>
+                <li>I’m upfront, fast to respond, and not here to upsell you something you don’t need.</li>
+                <li>You’ll always know what you’re getting.</li>
+                <li>If something’s outside my scope, I’ll tell you straight.</li>
+            </ul>
         </section>
 
         <section id="testimonials" class="testimonials">
@@ -72,30 +77,196 @@
                 <p>It usually starts with a question—<span style="color: #0031b9; text-decoration: underline;">“Hey Ian, can you help with this?”</span> The answer’s almost always yes, and when it’s not, I’ll still point you in the right direction.</p>
             </div>
         </section>
+        <!-- 
+Hey Copilot Pro:
 
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <div class="contact-container">
-                <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/mkgrbjdv" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+I need to add a brand-new contact section to my one-page website.
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+SITE CONTEXT:
+- There is currently NO <section id="contact">.
+- Please create and insert a new <section id="contact"> directly AFTER the section titled "Why 'Hey Ian'?".
+- This site uses a minimalist, slightly quirky tone with retro design elements.
+- I'm trying to blend a friendly retro-hacker vibe with professional-grade accessibility and responsiveness.
 
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
+WHAT TO DO:
+1. Insert the full contact form HTML block (included below) into the new <section id="contact">.
+2. Ensure that the styles are compatible with my site's color scheme and font system, but **preserve the terminal aesthetic** (green-on-black, monospaced font, blinking cursor, fake CLI prompts).
+3. Make sure the design is responsive (mobile/tablet/desktop) using flex or grid layout as needed.
+4. The form must support light and dark modes using prefers-color-scheme.
+5. Validate the form POSTs to Formspree at this endpoint:
+   https://formspree.io/f/YOUR_FORM_ID
+   (I’ll replace YOUR_FORM_ID with my real ID.)
+6. Show a fake terminal confirmation message when the form is submitted successfully.
+7. Include all necessary CSS styles and JS code in the appropriate spots, either inline in this HTML file or scoped properly in external files.
+8. Comment the styles clearly in CSS as "Contact Terminal Styles" so I can track them easily.
+9. Do NOT break or overwrite any other sections on the page.
+10. Keep all animations and interactive quirks (typewriter labels, cursor blinks, etc.).
 
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-                <div class="dwservice-placeholder">
-                    <h3>DWService App</h3>
-                    <p>Placeholder for the upcoming DWService app integration.</p>
-                </div>
-            </div>
-        </section>
+Insert and adapt the following HTML:
+-->
+
+<section id="contact">
+    <div class="terminal">
+      <h2>&gt; Initiating contact protocol...</h2>
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">[+] Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">[+] Email address:</label>
+        <input type="email" id="email" name="_replyto" required>
+  
+        <label for="phone">[+] Phone number:</label>
+        <input type="tel" id="phone" name="phone">
+  
+        <label for="location">[+] Your location:</label>
+        <input type="text" id="location" name="location">
+  
+        <label for="message">[+] What seems to be the issue?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+  
+        <button type="submit">[SEND TRANSMISSION]</button>
+      </form>
+  
+      <div class="confirmation" id="confirmationBox">
+        > Transmission received.  
+        > Ian has been notified.  
+        > Expect a response soon. Stay safe, user.
+      </div>
+    </div>
+  </section>
+  
+  <!--
+  Below is the CSS Copilot should merge into the main stylesheet
+  Please inject it and comment it clearly as "Contact Terminal Styles"
+  -->
+  
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --text: #00ff88;
+      --accent: #00ffaa;
+      --error: #ff4f4f;
+      --font-mono: 'Courier New', Courier, monospace;
+    }
+  
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f0f0f0;
+        --text: #004422;
+        --accent: #009966;
+        --error: #cc0000;
+      }
+    }
+  
+    .terminal {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 2rem;
+      border: 2px solid var(--accent);
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px var(--accent);
+      font-family: var(--font-mono);
+    }
+  
+    .terminal h2 {
+      margin-bottom: 1rem;
+      animation: blink-cursor 1s step-end infinite;
+    }
+  
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      animation: type-in 0.4s ease-out both;
+    }
+  
+    input, textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--accent);
+      color: var(--text);
+      font: inherit;
+      padding: 0.5rem 0;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+  
+    input:focus, textarea:focus {
+      border-color: var(--error);
+    }
+  
+    button {
+      margin-top: 1.5rem;
+      background: var(--accent);
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      transition: background 0.3s ease;
+    }
+  
+    button:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+  
+    .confirmation {
+      margin-top: 2rem;
+      display: none;
+      white-space: pre-wrap;
+      animation: fadein 0.5s ease-out forwards;
+    }
+  
+    @keyframes blink-cursor {
+      0%, 100% { border-right: 2px solid transparent; }
+      50% { border-right: 2px solid var(--text); }
+    }
+  
+    @keyframes type-in {
+      from { transform: translateX(-10px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  
+  <!--
+  Below is the JavaScript. Copilot, please scope it properly and make sure it doesn’t interfere with other scripts.
+  -->
+  
+  <script>
+    const form = document.getElementById('contactForm');
+    const confirmBox = document.getElementById('confirmationBox');
+  
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          confirmBox.style.display = 'block';
+        } else {
+          alert('Transmission failed. Try again later.');
+        }
+      }).catch(error => {
+        alert('An unexpected error occurred.');
+      });
+    });
+  </script>
+  
     </main>
 
     <footer>

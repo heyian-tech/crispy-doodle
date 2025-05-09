@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Updated font style for a modern and professional look */
+    font-family: 'Consolas', 'Courier New', monospace; /* Updated font style for consistency */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -47,19 +47,12 @@ body {
 
 /* Floating Logo Icon - persistent, upper left, always visible */
 .floating-logo-icon {
-    position: fixed;
-    top: 0px;
-    left: 24px;
-    width: 700px;
-    height: 200px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 0;
+    display: block; /* Make the floating logo visible */
+    position: fixed; /* Change to fixed to float with the viewer */
+    top: 0; /* Align it to the top of the page */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 1001; /* Ensure it stays above other elements */
 }
 .floating-logo-icon .logo-img {
     width: 689px;
@@ -142,6 +135,16 @@ header.hero .cta.secondary:hover {
 
 .about-content div {
     font-family: 'Consolas', 'Courier New', monospace; /* Changed to a different monospaced font for a fresh IT-related look */
+}
+
+.about-content p {
+    font-family: 'Fira Code', monospace; /* Updated font to Fira Code for a modern coding-inspired look */
+    color: #008db9; /* Personal and consistent text color */
+    font-size: 1.5rem; /* Larger font size for readability */
+    line-height: 1.8; /* Comfortable line spacing */
+    text-align: justify; /* Align text for a polished look */
+    margin-top: 1rem; /* Add spacing below the title */
+    font-weight: 600; /* Updated to semibold for better emphasis */
 }
 
 /* About Me title animation */
@@ -523,11 +526,7 @@ button {
 
 /* About Section */
 [data-theme="dark"] .about-content p {
-    /* color: #00ffaa; */
-    /* color: #00b989; */
-    color: #fff;
-    border-color: #222;
-    background: #111;
+    color: #008db9; /* Ensure consistency in dark mode */
 }
 
 /* Services Section */
@@ -549,13 +548,6 @@ button {
 }
 
 /* Testimonials Section */
-[data-theme="dark"] .testimonials {
-    /* background-color: #333; */
-    /* color: white; */
-    /* text-align: center; */
-    /* font-size: 1.5rem; */
-    /* line-height: 2; */
-}
 [data-theme="dark"] .testimonial-box {
     position: relative;
     background: #008db9; /* Chat bubble background color */
@@ -571,3 +563,17 @@ button {
 
 /* Contact Section */
 /* Removed empty dark mode .contact ruleset */
+
+/* Navbar transparency over floating logo */
+.navbar::after {
+    content: '';
+    position: fixed;
+    top: 0; /* Align with the floating logo */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 689px; /* Match the width of the floating logo */
+    height: 169px; /* Match the height of the floating logo */
+    background: transparent; /* Make the area transparent */
+    z-index: 998; /* Ensure it stays above the navbar background */
+    pointer-events: none; /* Allow interactions to pass through */
+}

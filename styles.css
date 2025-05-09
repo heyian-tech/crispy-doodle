@@ -48,10 +48,10 @@ body {
 /* Floating Logo Icon - persistent, upper left, always visible */
 .floating-logo-icon {
     position: fixed;
-    top: 24px;
+    top: 0px;
     left: 24px;
-    width: 340px;
-    height: 180px;
+    width: 700px;
+    height: 200px;
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -67,21 +67,13 @@ body {
     display: block;
     border-radius: 0px;
     /* Removed border properties */
-    background: url('https://photos.heyian.cloud/XL_cropped_logo.png') no-repeat center center;
+    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat center center;
     background-size: 100% 100%; /* Fill the container, reducing top/bottom padding */
     background-color: transparent;
-    box-shadow: 0 0 64px 10px #5100B9, 0 8px 48px 0 rgba(0,0,0,0.18);
-    transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
 }
 /* No animation on .floating-logo-icon .logo-img or hover/focus states */
 .floating-logo-icon .logo-img:focus {
     outline: none;
-}
-.floating-logo-icon .logo-img:hover {
-    border-color: #0031b9;
-    box-shadow: 0 0 96px 32px #5100B9, 0 12px 64px 0 rgba(0,0,0,0.22);
-    /* Example: animated border sparkle effect */
-    animation: logo-border-sparkle 1.2s linear infinite;
 }
 
 /* Hero Section */

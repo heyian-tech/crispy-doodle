@@ -62,22 +62,26 @@ body {
     padding: 0;
 }
 .floating-logo-icon .logo-img {
-    width: 320px;
-    height: 160px;
+    width: 689px;
+    height: 169px;
     display: block;
-    border-radius: 999px;
-    border: 8px solid #0031b9;
-    background: url('https://photos.heyian.cloud/heyian_logo_XL.png') no-repeat center center;
-    background-size: 90% 90%;
+    border-radius: 0px;
+    /* Removed border properties */
+    background: url('https://photos.heyian.cloud/XL_cropped_logo.png') no-repeat center center;
+    background-size: 100% 100%; /* Fill the container, reducing top/bottom padding */
     background-color: transparent;
-    box-shadow: 0 0 64px 16px #5100B9, 0 8px 48px 0 rgba(0,0,0,0.18);
+    box-shadow: 0 0 64px 10px #5100B9, 0 8px 48px 0 rgba(0,0,0,0.18);
     transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
 }
-.floating-logo-icon .logo-img:focus,
+/* No animation on .floating-logo-icon .logo-img or hover/focus states */
+.floating-logo-icon .logo-img:focus {
+    outline: none;
+}
 .floating-logo-icon .logo-img:hover {
     border-color: #0031b9;
     box-shadow: 0 0 96px 32px #5100B9, 0 12px 64px 0 rgba(0,0,0,0.22);
-    transform: scale(1.06) rotate(-2deg);
+    /* Example: animated border sparkle effect */
+    animation: logo-border-sparkle 1.2s linear infinite;
 }
 
 /* Hero Section */

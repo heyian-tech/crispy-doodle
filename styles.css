@@ -522,6 +522,159 @@ button {
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .floating-logo-icon {
+        top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .about-me {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .navbar {
+        font-size: 14px;
+    }
+
+    .floating-logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-me {
+        font-size: 14px;
+    }
+}
+
+/* High-Resolution Mobile Screens (e.g., iPhone 16 Pro Max) */
+@media (min-width: 430px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .floating-logo-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    header.hero h1 {
+        font-size: 2.5rem;
+    }
+
+    header.hero .hero-content {
+        padding: 1rem;
+    }
+}
+
+/* Additional Responsive Design for Various Devices */
+
+/* Small Tablets (600px to 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        padding: 0.8rem;
+        font-size: 1.1rem;
+    }
+
+    .floating-logo-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    header.hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Large Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 17px;
+    }
+
+    .navbar {
+        padding: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .floating-logo-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    header.hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Small Desktops (1024px to 1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    body {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .floating-logo-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    header.hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Large Desktops (1280px and above) */
+@media (min-width: 1280px) {
+    body {
+        font-size: 20px;
+    }
+
+    .navbar {
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .floating-logo-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    header.hero h1 {
+        font-size: 4rem;
+    }
+}
+
 /* Dark Mode Overrides */
 
 /* About Section */

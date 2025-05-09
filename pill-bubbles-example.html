@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pill-Shaped Gradient Border Bubbles</title>
+  <style>
+    .bubble-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 0;
+    }
+    .bubble-wrapper {
+      display: inline-block;
+      padding: 6px; /* border thickness */
+      border-radius: 999px;
+      background: linear-gradient(to bottom, #008CB9 0%, #5100B9 50%, #B90042 100%);
+      transition: background 0.3s ease;
+    }
+    .bubble-inner {
+      padding: 12px 24px;
+      background-color: white;
+      border-radius: 999px;
+      color: #333;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-align: center;
+      min-width: 160px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bubble-wrapper:hover .bubble-inner {
+      background-color: #008db9;
+      color: white;
+    }
+    @media (max-width: 700px) {
+      .bubble-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .bubble-inner {
+        min-width: 0;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 12px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bubble-container">
+    <div class="bubble-wrapper">
+      <div class="bubble-inner">Insight One</div>
+    </div>
+    <div class="bubble-wrapper">
+      <div class="bubble-inner">Insight Two</div>
+    </div>
+    <div class="bubble-wrapper">
+      <div class="bubble-inner">Insight Three</div>
+    </div>
+  </div>
+</body>
+</html>

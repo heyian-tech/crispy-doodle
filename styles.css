@@ -26,21 +26,58 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    transition: color 0.2s;
 }
 
-/* Updated the banner to include the company logo */
-.navbar .logo {
-    background: url('https://photos.heyian.cloud/heyian_logo_XL.png') no-repeat left center;
-    background-size: 300%;
-    text-indent: -9999px; /* Hide text */
-    overflow: hidden;
+.nav-links a:hover, .nav-links a:focus {
+    color: #FFD700;
+}
+
+/* Floating Logo Icon - persistent, upper left, always visible */
+.floating-logo-icon {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    width: 340px;
+    height: 180px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+.floating-logo-icon .logo-img {
+    width: 320px;
+    height: 160px;
+    display: block;
+    border-radius: 999px;
+    border: 8px solid #0031b9;
+    background: url('https://photos.heyian.cloud/heyian_logo_XL.png') no-repeat center center;
+    background-size: 90% 90%;
+    background-color: transparent;
+    box-shadow: 0 0 64px 16px #5100B9, 0 8px 48px 0 rgba(0,0,0,0.18);
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+}
+.floating-logo-icon .logo-img:focus,
+.floating-logo-icon .logo-img:hover {
+    border-color: #0031b9;
+    box-shadow: 0 0 96px 32px #5100B9, 0 12px 64px 0 rgba(0,0,0,0.22);
+    transform: scale(1.06) rotate(-2deg);
 }
 
 /* Hero Section */
@@ -62,6 +99,8 @@ header.hero h1 {
 header.hero .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 header.hero .cta {
@@ -71,17 +110,23 @@ header.hero .cta {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2rem;
-}
-
-.cta.secondary {
     background: white;
-    color: #333;
+    color: #008db9;
+    font-weight: bold;
+    border: 2px solid #008db9;
+    transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
-/* Updated hover color for 'Get in Touch' button */
-.cta.secondary:hover {
-    background-color: #008db9; /* Updated hover color for 'Get in Touch' button */
-    color: white; /* Ensures text remains readable */
+header.hero .cta.secondary {
+    background: #008db9;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+header.hero .cta.secondary:hover {
+    background: #fff;
+    color: #008db9;
+    border: 2px solid #008db9;
 }
 
 /* About Section */
@@ -124,67 +169,95 @@ header.hero .cta {
     background-color: #f9f9f9;
 }
 
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 3px solid;
-    border-image-source: linear-gradient(to bottom, #008CB9 0%, #5100B9 50%, #B90042 100%);
-    border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
-}
-
-/* Portfolio Section */
-.portfolio .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card-content {
-    padding: 1rem;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact form label {
-    margin-top: 1rem;
-}
-
-.contact form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background: #007BFF;
+/* How I Work Section */
+.how-i-work {
+    background: #5100B9 !important;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.how-i-work h2 {
+    font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 4.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #007a5a;
+    text-shadow: 1px 2px 12px rgba(0,0,0,0.10);
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    animation: none;
+}
+.how-i-work p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(39, 36, 36, 0.1);
+}
+.how-i-work ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem 0.5rem;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    max-width: 1100px;
+    position: relative;
+}
+.how-i-work ul li {
+    width: 180px;
+    min-height: 120px;
+    background: #008db9;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 1.2rem 1.1rem 1.2rem 1.1rem;
+    border-radius: 50% 60% 55% 65% / 65% 55% 60% 50%; /* More curvy blob shape */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+}
+.how-i-work ul li:nth-child(odd) {
+    transform: translateY(30px) rotate(-8deg) scale(1.05);
+    z-index: 2;
+}
+.how-i-work ul li:nth-child(even) {
+    transform: translateY(-30px) rotate(8deg) scale(0.97);
+    z-index: 1;
+}
+.how-i-work ul li:nth-child(3n) {
+    transform: translateY(0px) rotate(-12deg) scale(1.08);
+    z-index: 3;
+}
+.how-i-work ul li:nth-child(4n) {
+    transform: translateY(20px) rotate(10deg) scale(1.03);
+    z-index: 2;
+}
+.how-i-work ul li:nth-child(5n) {
+    transform: translateY(-20px) rotate(-10deg) scale(1.01);
+    z-index: 1;
+}
+.how-i-work ul li:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    background: #00b989;
+    color: #fff;
+    transform: scale(1.12) rotate(2deg);
+    z-index: 10;
 }
 
 /* Testimonials Section */
@@ -363,401 +436,142 @@ button {
     color: white; /* Light text for readability */
 }
 
-/* How I Work Section */
-.how-i-work {
-    background: linear-gradient(270deg, #1E90FF, #FF69B4);
-    background-size: 400% 400%; /* Create a larger gradient for animation */
-    animation: gradientAnimation 8s ease infinite; /* Smooth infinite animation */
-    color: white; /* Ensure text is readable */
-    padding: 2rem 1rem;
-    text-align: center;
-    border-radius: 15px; /* Add rounded corners for a modern look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+/* Service Pills Styles */
+@keyframes diagonalMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
-
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 3rem 0;
 }
-
-.how-i-work h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #FFD700; /* Bright gold color to stand out against the animated background */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
-    position: relative;
-    animation: none; /* Default state without animation */
+.pill-wrapper {
+  display: inline-block;
+  padding: 6px; /* border thickness */
+  border-radius: 999px;
+  background: linear-gradient(45deg, #008CB9, #5100B9, #B90042);
+  background-size: 200% 200%;
+  animation: diagonalMove 5s linear infinite;
+  transition: background 0.3s ease;
 }
-
-.how-i-work h2.animate {
-    animation: slideIn 2s ease-in-out;
+.pill-inner {
+  padding: 24px 36px;
+  background-color: white;
+  border-radius: 999px;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  min-width: 220px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 24px rgba(80,0,185,0.08);
 }
-
-.how-i-work p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #333; /* Modern dark gray text for sleekness */
-    font-family: 'Roboto', sans-serif; /* Modern font */
-    max-width: 800px;
-    margin: 0 auto; /* Center the text */
-    padding: 1rem 2rem; /* Add padding for a clean layout */
-    border: 2px solid #ccc; /* Subtle border for a modern look */
-    border-radius: 10px; /* Rounded corners for sleekness */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background: #f9f9f9; /* Light gray background for contrast */
+.pill-inner h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #008db9;
 }
-
-@keyframes slideIn {
-    from {
-        left: -100px;
-        opacity: 0;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
+.pill-inner p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
 }
-
-/* Ensures text in the 'How I Work' section contrasts in night mode */
-[data-theme="dark"] .how-i-work p {
-    color: white; /* Ensure consistent white text in dark mode */
+.pill-wrapper:hover .pill-inner {
+  background-color: #008db9;
+  color: white;
 }
-
-/* Text color in light mode for About Me section */
-.about-content p {
-    color: white; /* Text color in light mode */
+.pill-wrapper:hover .pill-inner h3,
+.pill-wrapper:hover .pill-inner p {
+  color: white;
 }
-
-/* Text color in light mode for How I Work section */
-.how-i-work p {
-    color: black; /* Ensure consistent black text in light mode */
+.service-pills-title {
+  text-align: center;
+  font-family: 'Orbitron', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #008db9;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
 }
-
-/* Text color in dark mode for About Me and How I Work sections */
-[data-theme="dark"] .about-content p, [data-theme="dark"] .how-i-work p {
-    color: #008db9; /* Text color in dark mode */
-}
-
-/* Testimonial Box Styling */
-.testimonial-box {
-    background: #008db9; /* Changed background color to #008db9 */
-    border: 3px solid;
-    border-image-source: linear-gradient(to bottom, #008CB9 0%, #5100B9 50%, #B90042 100%);
-    border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    padding: 1.5rem; /* Adds spacing inside the box */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-width: 800px;
-    margin: 1rem auto; /* Centers the box */
-    color: black; /* Reverted text color to black */
-    font-family: 'Georgia', serif; /* Changed font to a softer and more personal style */
-}
-
-.testimonial-box:hover {
-    transform: scale(1.05); /* Slightly enlarges the box */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adds a more pronounced shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
-}
-
-.testimonials h2 {
-    font-size: 3rem; /* Larger font size to make the title stand out */
-    font-weight: bold; /* Emphasizes the title */
-    text-transform: uppercase; /* Adds a professional touch */
-    color: #008db9; /* Matches the section's theme */
-    letter-spacing: 2px; /* Enhances readability */
-}
-
-/* Changes the entire 'Why Hey Ian?' section background to black in dark mode */
-[data-theme="dark"] .testimonials {
-    background-color: black;
-}
-
-/* Keeps the text color white in dark mode */
-[data-theme="dark"] .testimonial-box {
-    color: black; /* Changes text color to black in dark mode */
-}
-
-/* Styled points in the 'How I Work' section */
-.how-i-work ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0;
-    margin: 0;
-}
-
-.how-i-work ul li {
-    background: #FFD700; /* Bright gold background for emphasis */
-    color: #333; /* Dark text for readability */
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0.5rem auto; /* Center the boxes horizontally */
-    padding: 1rem; /* Add padding for a clean look */
-    border-radius: 10px; /* Rounded corners for a modern design */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 50%; /* Restrict width to half the size */
-}
-
-/* Reverted the background color of the 'contact' section to its previous state */
-.contact {
-    background: linear-gradient(to bottom, #1E90FF, #87CEFA); /* Eye-catching gradient background */
-    color: white; /* Ensure text is readable */
-    padding: 3rem 1rem; /* Add more padding for emphasis */
-    text-align: center; /* Center-align content */
-    border-radius: 15px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add depth with a shadow */
-}
-
-.contact h2 {
-    font-size: 2.8rem; /* Increase font size for the title */
-    font-weight: bold; /* Make the title stand out */
-    text-transform: uppercase; /* Add emphasis with uppercase text */
-    margin-bottom: 1.5rem; /* Add spacing below the title */
-}
-
-.contact-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: center; /* Center the content */
-    gap: 2rem; /* Add spacing between elements */
-}
-
-.contact-form, .dwservice-placeholder {
-    flex: 1 1 45%; /* Adjust width for responsiveness */
-    max-width: 500px; /* Restrict maximum width */
-    background: white; /* Contrast background for form and placeholder */
-    color: #333; /* Dark text for readability */
-    border-radius: 10px; /* Rounded corners */
-    padding: 2rem; /* Add internal spacing */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.contact-form input, .contact-form textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    background: #FFD700; /* Bright gold button for emphasis */
-    color: #333; /* Dark text for readability */
-    font-size: 1.2rem; /* Increase button font size */
-    font-weight: bold; /* Make the button text stand out */
-    padding: 0.75rem 1.5rem; /* Add padding for a larger button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor for interactivity */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-}
-
-.contact-form button:hover {
-    background: #FFC107; /* Slightly darker gold on hover */
-}
-
-.dwservice-placeholder {
-    height: 100%; /* Matches the height of the left box */
-    display: flex;
+@media (max-width: 900px) {
+  .pill-container {
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    text-align: center;
-    color: #333;
+    gap: 1.5rem;
+  }
+  .pill-inner {
+    min-width: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 18px 10px;
+  }
 }
 
-/* Dark/Light Mode Styles */
-:root {
-    --background-color: #ffffff; /* Default light mode background */
-    --text-color: #000000; /* Default light mode text */
-    --primary-color: #008db9; /* Default primary color */
+/* Dark Mode Overrides */
+
+/* About Section */
+[data-theme="dark"] .about-content p {
+    /* color: #00ffaa; */
+    /* color: #00b989; */
+    color: #fff;
+    border-color: #222;
+    background: #111;
 }
 
-[data-theme="dark"] {
-    --background-color: #121212; /* Dark mode background */
-    --text-color: #ffffff; /* Dark mode text */
-    --primary-color: #1E90FF; /* Dark mode primary color */
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
-}
-
-.navbar, .hero-content, .about-content, .services, .how-i-work, .testimonials, .contact-container {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s; /* Ensures all sections adapt to theme */
-}
-
-/* Smooth border for toggle button */
-button {
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Updated hover effect for service cards */
-.services .card:hover {
-    transform: translateY(-10px);
-    background-color: #008db9; /* Updated hover color for service cards */
-}
-
-/* Light/Dark Toggle Button */
-.light-dark-toggle {
-    position: fixed;
-    bottom: 1rem; /* Adds padding from the bottom */
-    right: 1rem; /* Adds padding from the right */
-    z-index: 1000; /* Ensures it stays above other elements */
-}
-
-.light-dark-toggle img {
-    width: 40px; /* Adjusts the size of the toggle icon */
-    height: 40px; /* Ensures the icon maintains a square shape */
-}
-
-/* Changes text color in the services section to black in night mode */
+/* Services Section */
 [data-theme="dark"] .services .card {
     background: #333; /* Dark background for dark mode */
     color: white; /* Light text for readability */
 }
 
 /* How I Work Section */
-.how-i-work {
-    background: linear-gradient(270deg, #1E90FF, #FF69B4);
-    background-size: 400% 400%; /* Create a larger gradient for animation */
-    animation: gradientAnimation 8s ease infinite; /* Smooth infinite animation */
-    color: white; /* Ensure text is readable */
-    padding: 2rem 1rem;
-    text-align: center;
-    border-radius: 15px; /* Add rounded corners for a modern look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+[data-theme="dark"] .how-i-work {
+    /* background: #00313d !important; */
+    /* background: #008db9 !important; */
+    background: #0031b9 !important; /* Most used: deep teal/blue for dark mode */
+    color: #fff;
+}
+[data-theme="dark"] .how-i-work h2 {
+    color: #00b989;
+    text-shadow: 1px 2px 16px #000;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.how-i-work h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #FFD700; /* Bright gold color to stand out against the animated background */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
-    position: relative;
-    animation: none; /* Default state without animation */
-}
-
-.how-i-work h2.animate {
-    animation: slideIn 2s ease-in-out;
-}
-
-.how-i-work p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #333; /* Modern dark gray text for sleekness */
-    font-family: 'Roboto', sans-serif; /* Modern font */
-    max-width: 800px;
-    margin: 0 auto; /* Center the text */
-    padding: 1rem 2rem; /* Add padding for a clean layout */
-    border: 2px solid #ccc; /* Subtle border for a modern look */
-    border-radius: 10px; /* Rounded corners for sleekness */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background: #f9f9f9; /* Light gray background for contrast */
-}
-
-@keyframes slideIn {
-    from {
-        left: -100px;
-        opacity: 0;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-/* Ensures text in the 'How I Work' section contrasts in night mode */
-[data-theme="dark"] .how-i-work p {
-    color: white; /* Ensure consistent white text in dark mode */
-}
-
-/* Text color in light mode for About Me section */
-.about-content p {
-    color: white; /* Text color in light mode */
-}
-
-/* Text color in light mode for How I Work section */
-.how-i-work p {
-    color: black; /* Ensure consistent black text in light mode */
-}
-
-/* Text color in dark mode for About Me and How I Work sections */
-[data-theme="dark"] .about-content p, [data-theme="dark"] .how-i-work p {
-    color: #008db9; /* Text color in dark mode */
-}
-
-/* Testimonial Box Styling */
-.testimonial-box {
-    background: #008db9; /* Changed background color to #008db9 */
-    border: 3px solid;
-    border-image-source: linear-gradient(to bottom, #008CB9 0%, #5100B9 50%, #B90042 100%);
-    border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    padding: 1.5rem; /* Adds spacing inside the box */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-width: 800px;
-    margin: 1rem auto; /* Centers the box */
-    color: black; /* Reverted text color to black */
-    font-family: 'Georgia', serif; /* Changed font to a softer and more personal style */
-}
-
-.testimonial-box:hover {
-    transform: scale(1.05); /* Slightly enlarges the box */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adds a more pronounced shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
-}
-
-.testimonials h2 {
-    font-size: 3rem; /* Larger font size to make the title stand out */
-    font-weight: bold; /* Emphasizes the title */
-    text-transform: uppercase; /* Adds a professional touch */
-    color: #008db9; /* Matches the section's theme */
-    letter-spacing: 2px; /* Enhances readability */
-}
-
-/* Changes the entire 'Why Hey Ian?' section background to black in dark mode */
+/* Testimonials Section */
 [data-theme="dark"] .testimonials {
-    background-color: black;
+    /* background-color: #333; */
+    /* color: white; */
+    /* text-align: center; */
+    /* font-size: 1.5rem; */
+    /* line-height: 2; */
 }
-
-/* Keeps the text color white in dark mode */
 [data-theme="dark"] .testimonial-box {
-    color: black; /* Changes text color to black in dark mode */
-}
-
-/* Styled points in the 'How I Work' section */
-.how-i-work ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0;
-    margin: 0;
-}
-
-.how-i-work ul li {
-    background: #FFD700; /* Bright gold background for emphasis */
-    color: #333; /* Dark text for readability */
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0.5rem auto; /* Center the boxes horizontally */
-    padding: 1rem; /* Add padding for a clean look */
-    border-radius: 10px; /* Rounded corners for a modern design */
+    position: relative;
+    background: #008db9; /* Chat bubble background color */
+    color: white; /* Text color inside the bubble */
+    border-radius: 15px; /* Rounded corners for the bubble */
+    padding: 1.5rem; /* Internal spacing */
+    max-width: 600px; /* Restrict width for readability */
+    margin: 1rem auto; /* Center the bubble */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    line-height: 1.8; /* Comfortable line spacing */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 50%; /* Restrict width to half the size */
 }
+
+/* Contact Section */
+/* Removed empty dark mode .contact ruleset */

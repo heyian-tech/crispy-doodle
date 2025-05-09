@@ -11,9 +11,13 @@
     <meta http-equiv='pragma' content='no-cache'>
 </head>
 <body>
+    <!-- Floating Logo Icon, persistent in upper left -->
+    <div class="floating-logo-icon" tabindex="0" aria-label="Hey Ian LLC Logo">
+      <span class="logo-img"></span>
+    </div>
+
     <header class="hero">
         <nav class="navbar">
-            <div class="logo">Hey Ian LLC</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -42,20 +46,26 @@
             </div>
         </section>
 
-        <section id="services" class="services">
-            <h2>My Services</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <h3>Help Desk Support</h3>
-                    <p>24/7 support for all your IT needs.</p>
+        <section id="service-pills" class="service-pills">
+            <h2 class="service-pills-title">Services I Provide</h2>
+            <div class="pill-container">
+                <div class="pill-wrapper">
+                    <div class="pill-inner">
+                        <h3>Help Desk Support</h3>
+                        <p>24/7 support for all your IT needs.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>System Optimization</h3>
-                    <p>Ensure your systems run at peak performance.</p>
+                <div class="pill-wrapper">
+                    <div class="pill-inner">
+                        <h3>System Optimization</h3>
+                        <p>Ensure your systems run at peak performance.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Device Setup</h3>
-                    <p>Seamless setup for all your devices.</p>
+                <div class="pill-wrapper">
+                    <div class="pill-inner">
+                        <h3>Device Setup</h3>
+                        <p>Seamless setup for all your devices.</p>
+                    </div>
                 </div>
             </div>
         </section>

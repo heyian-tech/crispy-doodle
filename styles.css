@@ -14,8 +14,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(0, 141, 185, 0.75) !important; /* Explicitly set navbar color with higher priority */
+    min-height: unset;
+    height: 2.1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(255,255,255,0.5) !important; /* White, half opacity for light mode */
     color: white;
     position: sticky;
     top: 0;
@@ -23,10 +28,14 @@ body {
     opacity: 0.75; /* Retains the same transparency */
 }
 
+.navbar[data-theme="dark"] {
+    background-color: rgba(0,0,0,0.5) !important; /* Black, half opacity for dark mode */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.2rem; /* Reduced gap for tighter spacing */
     justify-content: flex-end;
     align-items: center;
     margin-left: auto;
@@ -36,37 +45,73 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2.1rem;
+    font-size: 1.3rem; /* Slightly smaller for compactness */
+    line-height: 1;
     letter-spacing: 1px;
-    transition: color 0.2s;
+    padding: 0 0.6rem; /* Reduced horizontal padding */
+    transition: color 0.2s, text-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 4px;
+    /* Use the same gradient as the service pill bubble borders */
+    background: linear-gradient(45deg, #008CB9, #5100B9, #B90042);
+    border-radius: 2px;
+    opacity: 0.85;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), opacity 0.3s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nav-links a:hover::after, .nav-links a:focus::after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
 }
 
 .nav-links a:hover, .nav-links a:focus {
-    color: #FFD700;
+    color: transparent;
+    background: linear-gradient(90deg, #008CB9, #5100B9, #B90042); /* Changed to 90deg for horizontal gradient */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+/* Navbar Logo Pill (attached logo) */
+.navbar-logo-pill {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: max(2vw, 48px); /* Generous left padding, scales with viewport */
+    padding-right: 2.5rem;
+    flex-shrink: 0;
+    /* Fills left side visually, but doesn't stretch logo */
+}
+.navbar-logo-pill .logo-img {
+    height: 31.5rem; /* 10.5rem * 3 = 31.5rem, 3x current size */
+    width: auto;
+    min-width: 900px;
+    max-width: 4800px;
+    display: block;
+    border-radius: 0px;
+    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat left center;
+    background-size: contain;
+    background-color: transparent;
+    /* No border, no shadow, no animation */
+    filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 12px #fff8);
 }
 
 /* Floating Logo Icon - persistent, upper left, always visible */
 .floating-logo-icon {
-    display: block; /* Make the floating logo visible */
-    position: fixed; /* Change to fixed to float with the viewer */
-    top: 0; /* Align it to the top of the page */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: 1001; /* Ensure it stays above other elements */
-}
-.floating-logo-icon .logo-img {
-    width: 689px;
-    height: 169px;
-    display: block;
-    border-radius: 0px;
-    /* Removed border properties */
-    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat center center;
-    background-size: 100% 100%; /* Fill the container, reducing top/bottom padding */
-    background-color: transparent;
-}
-/* No animation on .floating-logo-icon .logo-img or hover/focus states */
-.floating-logo-icon .logo-img:focus {
-    outline: none;
+    display: none !important;
 }
 
 /* Hero Section */
@@ -429,12 +474,6 @@ button {
     height: 40px; /* Ensures the icon maintains a square shape */
 }
 
-/* Changes text color in the services section to black in night mode */
-[data-theme="dark"] .services .card {
-    background: #333; /* Dark background for dark mode */
-    color: white; /* Light text for readability */
-}
-
 /* Service Pills Styles */
 @keyframes diagonalMove {
   0% {
@@ -730,3 +769,44 @@ button {
     z-index: 998; /* Ensure it stays above the navbar background */
     pointer-events: none; /* Allow interactions to pass through */
 }
+
+/* Absolute Logo Positioning in Navbar */
+.navbar-logo-pill-absolute {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    height: 2.1rem;
+    pointer-events: none; /* Let clicks pass through to navbar */
+}
+.navbar-logo-pill-absolute .logo-img {
+    height: 23.625rem; /* 31.5rem * 0.75 = 23.625rem */
+    width: auto;
+    min-width: 675px;
+    max-width: 3600px;
+    display: block;
+    border-radius: 0px;
+    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat left center;
+    background-size: contain;
+    background-color: transparent;
+    filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 12px #fff8);
+    pointer-events: auto;
+}
+
+/* Remove overlap pill styles */
+.navbar-logo-pill-overlap { display: none !important; }
+
+@media (max-width: 900px) {
+  .navbar-logo-pill-absolute .logo-img { height: 14.625rem; min-width: 450px; max-width: 1800px; }
+}
+@media (max-width: 600px) {
+  .navbar-logo-pill-absolute .logo-img { height: 11.25rem; min-width: 270px; max-width: 900px; }
+}
+
+/* Debugging - Remove this section in production */
+/* * {
+    outline: 1px solid rgba(255, 0, 0, 0.5) !important;
+} */

@@ -1,32 +1,31 @@
 /* General Styles */
 body {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Consolas', 'Courier New', monospace; /* Updated font style for consistency */
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    min-width: 100vw;
-    width: 100vw;
-    overflow-x: hidden;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    min-width: 100vw;
-    background-color: rgba(255,255,255,0.5) !important;
+    min-height: unset;
+    height: 4.2rem; /* Doubled height */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(255,255,255,0.5) !important; /* White, half opacity for light mode */
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    opacity: 0.95;
-    box-sizing: border-box;
-    padding: 0 2rem;
+    opacity: 0.75; /* Retains the same transparency */
 }
 
 .navbar[data-theme="dark"] {
@@ -34,31 +33,38 @@ body {
 }
 
 .navbar-logo-pill-absolute {
-    position: static;
-    transform: none;
-    margin-right: auto;
-    height: 3rem;
-    min-width: 120px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
     display: flex;
     align-items: center;
-    z-index: 1100;
+    height: 2.1rem;
+    pointer-events: none; /* Let clicks pass through to navbar */
 }
 
 .navbar-logo-pill-absolute .logo-img {
-    height: 3rem;
-    min-width: 120px;
-    max-width: 200px;
+    height: 23.625rem; /* 31.5rem * 0.75 = 23.625rem */
+    width: auto;
+    min-width: 675px;
+    max-width: 3600px;
+    display: block;
+    border-radius: 0px;
+    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat left center;
     background-size: contain;
+    background-color: transparent;
+    filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 12px #fff8);
+    pointer-events: auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem; /* Reduced gap for closer spacing */
     justify-content: flex-end;
     align-items: center;
-    margin-left: 0;
-    flex-wrap: wrap;
+    margin-left: auto;
 }
 
 .nav-links li {
@@ -69,10 +75,10 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     line-height: 1;
     letter-spacing: 1px;
-    padding: 0 0.6rem;
+    padding: 0 0.7rem; /* Reduced horizontal padding */
     transition: color 0.2s, text-shadow 0.3s;
     position: relative;
     overflow: hidden;
@@ -134,26 +140,20 @@ header.hero .cta.secondary:hover {
 /* About Section */
 .about-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 2rem;
     padding: 2rem 1rem;
     background-color: black !important; /* Enforce black background color */
     color: white; /* Ensure text is readable */
-    max-width: 900px;
-    margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .about-content img {
-    max-width: 180px;
-    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
 }
 
 .about-content div {
-    width: 100%;
-    text-align: center;
+    font-family: 'Consolas', 'Courier New', monospace; /* Changed to a different monospaced font for a fresh IT-related look */
 }
 
 .about-content p {
@@ -187,13 +187,99 @@ header.hero .cta.secondary:hover {
     background-color: #f9f9f9;
 }
 
+/* Service Pills Styles */
+@keyframes diagonalMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 3rem 0;
+}
+.pill-wrapper {
+  display: inline-block;
+  padding: 6px; /* border thickness */
+  border-radius: 999px;
+  background: linear-gradient(45deg, #008CB9, #5100B9, #B90042);
+  background-size: 200% 200%;
+  animation: diagonalMove 5s linear infinite;
+  transition: background 0.3s ease;
+}
+.pill-inner {
+  padding: 24px 36px;
+  background-color: white;
+  border-radius: 999px;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  min-width: 220px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 24px rgba(80,0,185,0.08);
+}
+.pill-inner h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #008db9;
+}
+.pill-inner p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+.pill-wrapper:hover .pill-inner {
+  background-color: #008db9;
+  color: white;
+}
+.pill-wrapper:hover .pill-inner h3,
+.pill-wrapper:hover .pill-inner p {
+  color: white;
+}
+.service-pills-title {
+  text-align: center;
+  font-family: 'Orbitron', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #008db9;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .pill-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .pill-inner {
+    min-width: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 18px 10px;
+  }
+}
+
 /* How I Work Section */
 .how-i-work {
-    width: 100vw;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    background: #5100B9 !important;
+    color: white;
     padding: 2rem 1rem;
+    text-align: center;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -227,14 +313,14 @@ header.hero .cta.secondary:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    gap: 1.5rem;
+    gap: 0.5rem 0.5rem;
     width: 100%;
     margin: 2rem auto 0 auto;
     max-width: 1100px;
     position: relative;
 }
 .how-i-work ul li {
-    width: 220px;
+    width: 180px;
     min-height: 120px;
     background: #008db9;
     color: #fff;
@@ -242,7 +328,7 @@ header.hero .cta.secondary:hover {
     font-weight: bold;
     margin: 0;
     padding: 1.2rem 1.1rem 1.2rem 1.1rem;
-    border-radius: 2rem;
+    border-radius: 50% 60% 55% 65% / 65% 55% 60% 50%; /* More curvy blob shape */
     box-shadow: 0 4px 16px rgba(0,0,0,0.13);
     display: flex;
     align-items: center;
@@ -449,322 +535,108 @@ button {
     height: 40px; /* Ensures the icon maintains a square shape */
 }
 
-/* Service Pills Styles */
-@keyframes diagonalMove {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-.pill-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  box-sizing: border-box;
-}
-.pill-wrapper {
-  flex: 1 1 250px;
-  min-width: 220px;
-  max-width: 350px;
-  box-sizing: border-box;
-}
-.pill-inner {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-}
-.pill-inner h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
-  color: #008db9;
-}
-.pill-inner p {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
-}
-.pill-wrapper:hover .pill-inner {
-  background-color: #008db9;
-  color: white;
-}
-.pill-wrapper:hover .pill-inner h3,
-.pill-wrapper:hover .pill-inner p {
-  color: white;
-}
-.service-pills-title {
-  text-align: center;
-  font-family: 'Orbitron', 'Segoe UI', 'Roboto', Arial, sans-serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #008db9;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
-}
-@media (max-width: 900px) {
-  .pill-container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .pill-inner {
-    min-width: 0;
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 18px 10px;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .floating-logo-icon {
-        top: 10px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .about-me {
-        padding: 10px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    .navbar {
-        font-size: 14px;
-    }
-
-    .floating-logo-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .about-me {
-        font-size: 14px;
-    }
-}
-
-/* High-Resolution Mobile Screens (e.g., iPhone 16 Pro Max) */
-@media (min-width: 430px) and (max-width: 900px) {
-    body {
-        font-size: 16px;
-    }
-
-    .navbar {
-        padding: 1rem;
-        font-size: 1.2rem;
-    }
-
-    .floating-logo-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    header.hero h1 {
-        font-size: 2.5rem;
-    }
-
-    header.hero .hero-content {
-        padding: 1rem;
-    }
-}
-
-/* Additional Responsive Design for Various Devices */
-
-/* Small Tablets (600px to 768px) */
-@media (min-width: 600px) and (max-width: 768px) {
-    body {
-        font-size: 15px;
-    }
-
-    .navbar {
-        padding: 0.8rem;
-        font-size: 1.1rem;
-    }
-
-    .floating-logo-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    header.hero h1 {
-        font-size: 2.8rem;
-    }
-}
-
-/* Large Tablets (768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        font-size: 17px;
-    }
-
-    .navbar {
-        padding: 1.2rem;
-        font-size: 1.3rem;
-    }
-
-    .floating-logo-icon {
-        width: 70px;
-        height: 70px;
-    }
-
-    header.hero h1 {
-        font-size: 3rem;
-    }
-}
-
-/* Small Desktops (1024px to 1280px) */
-@media (min-width: 1024px) and (max-width: 1280px) {
-    body {
-        font-size: 18px;
-    }
-
-    .navbar {
-        padding: 1.5rem;
-        font-size: 1.4rem;
-    }
-
-    .floating-logo-icon {
-        width: 80px;
-        height: 80px;
-    }
-
-    header.hero h1 {
-        font-size: 3.5rem;
-    }
-}
-
-/* Large Desktops (1280px and above) */
-@media (min-width: 1280px) {
-    body {
-        font-size: 20px;
-    }
-
-    .navbar {
-        padding: 2rem;
-        font-size: 1.5rem;
-    }
-
-    .floating-logo-icon {
-        width: 100px;
-        height: 100px;
-    }
-
-    header.hero h1 {
-        font-size: 4rem;
-    }
-}
-
-/* Dark Mode Overrides */
-
-/* About Section */
-[data-theme="dark"] .about-content p {
-    color: #008db9; /* Ensure consistency in dark mode */
-}
-
-/* Services Section */
-[data-theme="dark"] .services .card {
-    background: #333; /* Dark background for dark mode */
-    color: white; /* Light text for readability */
-}
-
-/* How I Work Section */
-[data-theme="dark"] .how-i-work {
-    /* background: #00313d !important; */
-    /* background: #008db9 !important; */
-    background: #0031b9 !important; /* Most used: deep teal/blue for dark mode */
-    color: #fff;
-}
-[data-theme="dark"] .how-i-work h2 {
-    color: #00b989;
-    text-shadow: 1px 2px 16px #000;
-}
-
-/* Testimonials Section */
-[data-theme="dark"] .testimonial-box {
-    position: relative;
-    background: #008db9; /* Chat bubble background color */
-    color: white; /* Text color inside the bubble */
-    border-radius: 15px; /* Rounded corners for the bubble */
-    padding: 1.5rem; /* Internal spacing */
-    max-width: 600px; /* Restrict width for readability */
-    margin: 1rem auto; /* Center the bubble */
-    font-family: 'Roboto', sans-serif; /* Modern font */
-    line-height: 1.8; /* Comfortable line spacing */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Contact Section */
-/* Removed empty dark mode .contact ruleset */
-
-/* Navbar transparency over floating logo */
-.navbar::after {
-    content: '';
-    position: fixed;
-    top: 0; /* Align with the floating logo */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    width: 689px; /* Match the width of the floating logo */
-    height: 169px; /* Match the height of the floating logo */
-    background: transparent; /* Make the area transparent */
-    z-index: 998; /* Ensure it stays above the navbar background */
-    pointer-events: none; /* Allow interactions to pass through */
-}
-
-/* Absolute Logo Positioning in Navbar */
-.navbar-logo-pill-absolute {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1100;
+/* Why Ian Section */
+.why-ian-card {
     display: flex;
-    align-items: center;
-    height: 2.1rem;
-    pointer-events: none; /* Let clicks pass through to navbar */
-}
-.navbar-logo-pill-absolute .logo-img {
-    height: 23.625rem; /* 31.5rem * 0.75 = 23.625rem */
-    width: auto;
-    min-width: 675px;
-    max-width: 3600px;
-    display: block;
-    border-radius: 0px;
-    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat left center;
-    background-size: contain;
-    background-color: transparent;
-    filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 12px #fff8);
-    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+    animation: fadein 0.5s ease-out forwards;
 }
 
-/* Remove overlap pill styles */
-.navbar-logo-pill-overlap { display: none !important; }
+.why-ian-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-right: 1px solid var(--accent);
+}
 
-@media (max-width: 900px) {
-  .navbar-logo-pill-absolute .logo-img { height: 14.625rem; min-width: 450px; max-width: 1800px; }
+.why-ian-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.why-ian-quote {
+    font-style: italic;
+    margin: 0;
+}
+
+.why-ian-message {
+    margin-top: 0.5rem;
+    color: #008db9; /* Match site blue */
+}
+
+.why-ian-title {
+    font-family: 'Orbitron', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #008db9 0%, #b90042 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 4px 32px 0 rgba(0,141,185,0.10), 0 1.5px 0 #b90042 inset;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    transition: background 0.4s;
+    animation: whyIanPop 1.2s cubic-bezier(.23,1.12,.32,1) 1;
+}
+.why-ian-title::before {
+    content: "✨";
+    position: absolute;
+    left: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%) scale(1.2) rotate(-10deg);
+    font-size: 1.6rem;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px #fff8);
+    pointer-events: none;
+}
+.why-ian-title::after {
+    content: "🤝";
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%) scale(1.2) rotate(8deg);
+    font-size: 1.6rem;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px #fff8);
+    pointer-events: none;
 }
 @media (max-width: 600px) {
-  .navbar-logo-pill-absolute .logo-img { height: 11.25rem; min-width: 270px; max-width: 900px; }
+    .why-ian-title {
+        font-size: 2rem;
+        padding: 0.4rem 1.2rem;
+    }
+    .why-ian-title::before, .why-ian-title::after {
+        font-size: 1.1rem;
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+}
+@keyframes whyIanPop {
+    0% { transform: scale(0.7) translateY(-30px); opacity: 0; }
+    60% { transform: scale(1.08) translateY(6px); opacity: 1; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+@media (prefers-color-scheme: dark) {
+    .why-ian-title {
+        background: linear-gradient(90deg, #00ffaa 0%, #5100b9 100%);
+        box-shadow: 0 4px 32px 0 rgba(0,255,170,0.10), 0 1.5px 0 #5100b9 inset;
+    }
+    .why-ian-title::before, .why-ian-title::after {
+        filter: drop-shadow(0 0 8px #00ffaa88);
+    }
 }
 
 /* Debugging - Remove this section in production */

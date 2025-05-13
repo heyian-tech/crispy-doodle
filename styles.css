@@ -1,121 +1,89 @@
 /* General Styles */
 body {
-    font-family: 'Consolas', 'Courier New', monospace; /* Updated font style for consistency */
+    font-family: 'Consolas', 'Courier New', monospace;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    min-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    min-height: unset;
-    height: 2.1rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    background-color: rgba(255,255,255,0.5) !important; /* White, half opacity for light mode */
+    width: 100vw;
+    min-width: 100vw;
+    background-color: rgba(255,255,255,0.5) !important;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    opacity: 0.75; /* Retains the same transparency */
+    opacity: 0.95;
+    box-sizing: border-box;
+    padding: 0 2rem;
 }
 
 .navbar[data-theme="dark"] {
     background-color: rgba(0,0,0,0.5) !important; /* Black, half opacity for dark mode */
 }
 
+.navbar-logo-pill-absolute {
+    position: static;
+    transform: none;
+    margin-right: auto;
+    height: 3rem;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    z-index: 1100;
+}
+
+.navbar-logo-pill-absolute .logo-img {
+    height: 3rem;
+    min-width: 120px;
+    max-width: 200px;
+    background-size: contain;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.2rem; /* Reduced gap for tighter spacing */
+    gap: 1.2rem;
     justify-content: flex-end;
     align-items: center;
-    margin-left: auto;
+    margin-left: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    flex: 0 1 auto;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.3rem; /* Slightly smaller for compactness */
+    font-size: 1.1rem;
     line-height: 1;
     letter-spacing: 1px;
-    padding: 0 0.6rem; /* Reduced horizontal padding */
+    padding: 0 0.6rem;
     transition: color 0.2s, text-shadow 0.3s;
     position: relative;
     overflow: hidden;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) scaleX(0);
-    width: 80%;
-    height: 4px;
-    /* Use the same gradient as the service pill bubble borders */
-    background: linear-gradient(45deg, #008CB9, #5100B9, #B90042);
-    border-radius: 2px;
-    opacity: 0.85;
-    transition: transform 0.3s cubic-bezier(.4,2,.6,1), opacity 0.3s;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.nav-links a:hover::after, .nav-links a:focus::after {
-    transform: translateX(-50%) scaleX(1);
-    opacity: 1;
-}
-
-.nav-links a:hover, .nav-links a:focus {
-    color: transparent;
-    background: linear-gradient(90deg, #008CB9, #5100B9, #B90042); /* Changed to 90deg for horizontal gradient */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-}
-
-/* Navbar Logo Pill (attached logo) */
-.navbar-logo-pill {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-left: max(2vw, 48px); /* Generous left padding, scales with viewport */
-    padding-right: 2.5rem;
-    flex-shrink: 0;
-    /* Fills left side visually, but doesn't stretch logo */
-}
-.navbar-logo-pill .logo-img {
-    height: 31.5rem; /* 10.5rem * 3 = 31.5rem, 3x current size */
-    width: auto;
-    min-width: 900px;
-    max-width: 4800px;
-    display: block;
-    border-radius: 0px;
-    background: url('https://photos.heyian.cloud/cropped_fun_logo.png') no-repeat left center;
-    background-size: contain;
-    background-color: transparent;
-    /* No border, no shadow, no animation */
-    filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 12px #fff8);
-}
-
-/* Floating Logo Icon - persistent, upper left, always visible */
-.floating-logo-icon {
-    display: none !important;
+    white-space: nowrap;
 }
 
 /* Hero Section */
 header.hero {
+    width: 100vw;
+    min-width: 100vw;
+    box-sizing: border-box;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://photos.heyian.cloud/itservice-slider-bg.png') no-repeat center center/cover;
     color: white;
     text-align: center;
@@ -166,20 +134,26 @@ header.hero .cta.secondary:hover {
 /* About Section */
 .about-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
     padding: 2rem 1rem;
     background-color: black !important; /* Enforce black background color */
     color: white; /* Ensure text is readable */
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .about-content img {
-    max-width: 300px;
+    max-width: 180px;
+    width: 100%;
     border-radius: 10px;
 }
 
 .about-content div {
-    font-family: 'Consolas', 'Courier New', monospace; /* Changed to a different monospaced font for a fresh IT-related look */
+    width: 100%;
+    text-align: center;
 }
 
 .about-content p {
@@ -215,10 +189,11 @@ header.hero .cta.secondary:hover {
 
 /* How I Work Section */
 .how-i-work {
-    background: #5100B9 !important;
-    color: white;
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
     padding: 2rem 1rem;
-    text-align: center;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -252,14 +227,14 @@ header.hero .cta.secondary:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    gap: 0.5rem 0.5rem;
+    gap: 1.5rem;
     width: 100%;
     margin: 2rem auto 0 auto;
     max-width: 1100px;
     position: relative;
 }
 .how-i-work ul li {
-    width: 180px;
+    width: 220px;
     min-height: 120px;
     background: #008db9;
     color: #fff;
@@ -267,7 +242,7 @@ header.hero .cta.secondary:hover {
     font-weight: bold;
     margin: 0;
     padding: 1.2rem 1.1rem 1.2rem 1.1rem;
-    border-radius: 50% 60% 55% 65% / 65% 55% 60% 50%; /* More curvy blob shape */
+    border-radius: 2rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.13);
     display: flex;
     align-items: center;
@@ -492,33 +467,19 @@ button {
   gap: 2rem;
   justify-content: center;
   align-items: stretch;
-  margin: 3rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .pill-wrapper {
-  display: inline-block;
-  padding: 6px; /* border thickness */
-  border-radius: 999px;
-  background: linear-gradient(45deg, #008CB9, #5100B9, #B90042);
-  background-size: 200% 200%;
-  animation: diagonalMove 5s linear infinite;
-  transition: background 0.3s ease;
+  flex: 1 1 250px;
+  min-width: 220px;
+  max-width: 350px;
+  box-sizing: border-box;
 }
 .pill-inner {
-  padding: 24px 36px;
-  background-color: white;
-  border-radius: 999px;
-  color: #333;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
-  min-width: 220px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  box-shadow: 0 4px 24px rgba(80,0,185,0.08);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .pill-inner h3 {
   margin: 0 0 0.5rem 0;

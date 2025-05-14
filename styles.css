@@ -61,28 +61,77 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Reduced gap for closer spacing */
+    gap: 0.5rem;
+    flex: 0 1 50%; /* Allow shrinking */
     justify-content: flex-end;
     align-items: center;
     margin-left: auto;
+    max-width: 50vw;
+    min-width: 0;
+    padding-right: 2vw;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .nav-links li {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
+    min-width: 0;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2.1rem;
-    line-height: 1;
-    letter-spacing: 1px;
-    padding: 0 0.7rem; /* Reduced horizontal padding */
-    transition: color 0.2s, text-shadow 0.3s;
+    font-family: 'Orbitron', 'Fira Code', 'Consolas', monospace;
+    font-size: 1.3rem;
+    padding: 0.6rem 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #008CB9;
+    border-radius: 2rem;
+    box-shadow: 0 2px 12px 0 #008cb933;
+    border: 2.5px solid transparent;
     position: relative;
     overflow: hidden;
-    white-space: nowrap;
+    transition: 
+        color 0.25s cubic-bezier(.4,2,.6,1),
+        background 0.25s cubic-bezier(.4,2,.6,1),
+        box-shadow 0.25s,
+        border 0.25s,
+        transform 0.25s cubic-bezier(.4,2,.6,1);
+    z-index: 1;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 2.2rem;
+    z-index: -1;
+    background: linear-gradient(120deg, #00ffaa, #008CB9, #B90042, #5100B9, #00ffaa);
+    background-size: 300% 300%;
+    opacity: 0;
+    transition: opacity 0.25s, background-position 0.7s cubic-bezier(.4,2,.6,1);
+    filter: blur(0.5px);
+    animation: none;
+}
+
+.nav-links a:hover, .nav-links a:focus {
+    color: #008CB9;
+    background: #fff;
+    border: 2.5px solid #00ffaa;
+    box-shadow: 0 4px 32px 0 #00ffaa55, 0 1.5px 0 #b90042 inset;
+    transform: scale(1.08) rotateX(8deg) skewY(-2deg);
+}
+
+.nav-links a:hover::before, .nav-links a:focus::before {
+    opacity: 1;
+    background-position: 100% 0%;
+    animation: nav-explode 1.2s cubic-bezier(.23,1.12,.32,1) infinite alternate;
+}
+
+@keyframes nav-explode {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 /* Hero Section */
@@ -144,8 +193,8 @@ header.hero .cta.secondary:hover {
     align-items: center;
     gap: 2rem;
     padding: 2rem 1rem;
-    background-color: #008db9 !important; /* Enforce black background color */
-    color: white; /* Ensure text is readable */
+    background-color: #000 !important;
+    color: #008db9 !important;
 }
 
 .about-content img {
@@ -157,29 +206,24 @@ header.hero .cta.secondary:hover {
     font-family: 'Consolas', 'Courier New', monospace; /* Changed to a different monospaced font for a fresh IT-related look */
 }
 
+.about-content h2 {
+    color: #008db9 !important; /* Set title color to site blue */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    animation: none; /* Default state without animation */
+}
+
 .about-content p {
+    color: #008db9 !important; /* Ensure all text in About Me is white for contrast */
     font-family: 'Fira Code', monospace; /* Updated font to Fira Code for a modern coding-inspired look */
-    color: #008db9; /* Personal and consistent text color */
     font-size: 1.5rem; /* Larger font size for readability */
     line-height: 1.8; /* Comfortable line spacing */
     text-align: justify; /* Align text for a polished look */
     margin-top: 1rem; /* Add spacing below the title */
     font-weight: 600; /* Updated to semibold for better emphasis */
-}
-
-/* About Me title animation */
-.about-content h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #008db9; /* Matches the 'How I Work' title color */
-    position: relative;
-    animation: none; /* Default state without animation */
-}
-
-.about-content h2.animate {
-    animation: slideIn 2s ease-in-out;
 }
 
 /* Services Section */
@@ -505,7 +549,7 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
 }
 
-.navbar, .hero-content, .about-content, .services, .how-i-work, .testimonials, .contact-container {
+.navbar, .hero-content, .services, .how-i-work, .testimonials, .contact-container {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s; /* Ensures all sections adapt to theme */

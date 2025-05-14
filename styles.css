@@ -140,9 +140,13 @@ header.hero {
     min-width: 100vw;
     box-sizing: border-box;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://photos.heyian.cloud/itservice-slider-bg.png') no-repeat center center/cover;
-    color: white; /* Reset default hero text color for light mode */
+    color: white; /* Default: white text in light mode */
     text-align: center;
     padding: 5rem 1rem;
+}
+
+header.hero h1, header.hero p {
+    color: inherit; /* Inherit from header.hero for both modes */
 }
 
 header.hero h1 {
@@ -159,6 +163,22 @@ header.hero .hero-content {
     background: transparent !important;
     box-shadow: none !important;
     margin-top: 8.5rem; /* Further increased space below navbar and logo, moving rest of the page content further down */
+}
+
+header.hero .hero-content h1,
+header.hero .hero-content p {
+    color: white !important;
+    font-size: 2.7rem;
+}
+
+header.hero .hero-content p {
+    font-size: 1.3rem;
+}
+
+/* Only apply blue color to hero text in dark mode */
+[data-theme="dark"] header.hero .hero-content h1,
+[data-theme="dark"] header.hero .hero-content p {
+    color: #008db9 !important;
 }
 
 header.hero .cta {

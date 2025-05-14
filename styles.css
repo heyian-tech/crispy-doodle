@@ -91,7 +91,7 @@ header.hero {
     min-width: 100vw;
     box-sizing: border-box;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://photos.heyian.cloud/itservice-slider-bg.png') no-repeat center center/cover;
-    color: white;
+    color: white; /* Reset default hero text color for light mode */
     text-align: center;
     padding: 5rem 1rem;
 }
@@ -109,6 +109,7 @@ header.hero .hero-content {
     margin: 0 auto;
     background: transparent !important;
     box-shadow: none !important;
+    margin-top: 8.5rem; /* Further increased space below navbar and logo, moving rest of the page content further down */
 }
 
 header.hero .cta {
@@ -119,7 +120,7 @@ header.hero .cta {
     text-decoration: none;
     font-size: 1.2rem;
     background: white;
-    color: #008db9;
+    color: #ffffff;
     font-weight: bold;
     border: 2px solid #008db9;
     transition: background 0.3s, color 0.3s, border 0.3s;
@@ -143,7 +144,7 @@ header.hero .cta.secondary:hover {
     align-items: center;
     gap: 2rem;
     padding: 2rem 1rem;
-    background-color: black !important; /* Enforce black background color */
+    background-color: #008db9 !important; /* Enforce black background color */
     color: white; /* Ensure text is readable */
 }
 
